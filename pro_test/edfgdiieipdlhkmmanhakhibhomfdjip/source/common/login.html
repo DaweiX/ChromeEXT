@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Clodura</title>
+        <link rel="stylesheet" type="text/css" href="../../css/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/select2.css">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+        <!--<link rel="stylesheet" type="text/css" href="../../css/site.css" />-->
+    </head>
+
+    <body id ='login_body' class="search" tabindex="1" >
+        <header class="ui segment" style="margin: 0;box-shadow: none;">
+            <div id='img_logo' style="width: 60%;float: left;"><img src="../../img/logo.png" style="width:80%"/></div>
+            <div style="float: right;cursor:pointer;"><a id="btnlogout">Logout</a><input style="padding-left:10px;width:25px;height:15px" type="image" id="close" src="../../img/Close.png" />
+                <div style='margin-top:8px' id="initials" type="hidden"  value="" ></div></div>
+        </header>
+
+       <form id="basic-search" class="ui form segment" style="margin:0">
+           <!--<div id='img_logo' style="width: 60%;float: left;margin-bottom:20px"><img src="img/logo.png"/></div>-->
+           <div class="ui message">
+               <h3>Login to Clodura</h3><p>
+                <input type="text" class="terms input-block-level" id="username" placeholder="Registered Email"></p>
+                <p><input type="password" class="terms input-block-level" id="password" placeholder=" Password"></p>
+                <p><button type="submit" id="btnlogin" class="ui btn btn-primary">Login</button></p>
+        </div>
+       </form>
+
+        <script src="../../lib/jquery.js"></script>
+        <script src="../../lib/select2.min.js"></script>
+	<script src ="login.js"></script>
+        <script src = "api.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery/jquery.userTimeout.js"></script>
+        <script src="../../js/jquery/jquery.sessionTimeout.js"></script>
+       <!-- <script type="text/javascript" src="../../js/cssrefresh.js"></script>-->
+    </body>
+
+</html>

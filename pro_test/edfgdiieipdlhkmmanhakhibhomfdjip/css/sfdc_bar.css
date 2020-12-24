@@ -1,0 +1,152 @@
+#sfdc-top-bar {
+    background: #fff;
+
+    border-bottom: 2px solid #e39321;
+
+    height: 50px;
+    min-width: 968px;
+    z-index: 100002;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#sfdc-top-bar .sl-header-logo {
+    float: left;
+    display: block;
+    height: 30px;
+    width: 10%;
+    position: relative;
+    top: 25%;
+}
+
+#sfdc-top-bar .sl-close-icon {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 25%;
+    cursor: pointer;
+}
+
+#prospector-box .sfdc-top-bar-show {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 13px;
+}
+
+#sfdc-top-bar .sl-header-logo img, #sfdc-top-bar .sl-close-icon img {
+    width: 80%;
+    float: right;
+}
+
+#sfdc-top-bar .sl-primary {
+    height: 100%;
+    float: left;
+    width: 43%;
+    padding-left: 2%;
+    font-size: 16px;
+}
+
+#sfdc-top-bar .sl-primary .sl-wrapper {
+    width: 25%;
+    float: left;
+    font-size: .8em;
+    position: relative;
+    top: 25%;
+    line-height: 1em;
+}
+
+#sfdc-top-bar .sl-primary .sl-wrapper:nth-of-type(4) {
+    width: 30%;
+}
+
+#sfdc-top-bar .sl-primary .sl-wrapper.full {
+    width: 100%;
+}
+
+#sfdc-top-bar .sl-primary .sl-person-icon {
+    float: left;
+    position: relative;
+    padding: 1%;
+    top: 15%;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.sl-person-icon img {
+    height: 100%;
+    width: 100%;
+}
+
+#sfdc-top-bar .sl-primary.sl-additional .sl-wrapper {
+    width: 100%;
+    text-align: center;
+    top: 38%; /* Halfway is 50% - (25% / 2 ) */
+}
+
+#sfdc-top-bar .sl-wrapper.middle {
+    top: 38%;
+}
+
+#sfdc-top-bar .sl-primary .sl-wrapper span {
+    width: 100%;
+    display: block;
+    overflow-y: hidden;
+    height: 1em;
+}
+
+#sfdc-top-bar .sl-primary .sl-wrapper .sl-loader {
+    height: 25px;
+}
+
+#sfdc-top-bar .sl-primary .sl-wrapper span:nth-of-type(1) {
+    padding-bottom: 4px;
+    margin-top: -2px;
+}
+
+body.sfdc-top-bar-active {
+    margin-top: 120px;
+}
+
+body.sfdc-top-bar-active.is-company {
+    margin-top: 140px !important;
+}
+
+body.sfdc-top-bar-active #header,
+#universal-typeahead-results {
+    margin-top: 50px !important;
+}
+
+body.sfdc-top-bar-active.sl-others-present {
+    margin-top: 170px !important;
+}
+
+body.sfdc-top-bar-active.sl-others-present.is-company {
+    margin-top: 190px !important;
+}
+
+body.sl-others-present #sfdc-top-bar {
+    margin-top: 50px !important;
+}
+
+body.sl-others-present #universal-typeahead-results,
+body.sl-others-present.sfdc-top-bar-active #header{
+    margin-top: 100px !important;
+}
+
+body.sl-others-present #prospector-box {
+    top: 130px;
+}
+
+#prospector-box-toggle {
+    z-index: 100003;
+}
+
+#sfdc-wrapper {
+    display: none;
+}

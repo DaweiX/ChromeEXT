@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>not-qualified</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Final-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cash-Back-(Wallet-Page)-(Menu-Open)-(Transaction-Details)-(Tablet)" transform="translate(-573.000000, -973.000000)">
+            <g id="transactions" transform="translate(300.000000, 90.000000)">
+                <g id="items" transform="translate(0.000000, 126.000000)">
+                    <g id="item" transform="translate(0.000000, 710.000000)">
+                        <g id="not-qualified" transform="translate(274.000000, 47.000000)">
+                            <polygon id="Path" stroke="#F9639C" stroke-linecap="square" points="0 12 6 0 12 12"></polygon>
+                            <line x1="6" y1="5.05263158" x2="6" y2="7.57894737" id="Path" stroke="#F9639C" stroke-linecap="square"></line>
+                            <ellipse id="Oval" fill="#F9639C" fill-rule="nonzero" cx="6" cy="9.47368421" rx="1" ry="1"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

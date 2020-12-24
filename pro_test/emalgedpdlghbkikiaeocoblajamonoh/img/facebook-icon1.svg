@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Final-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login" transform="translate(-72.000000, -535.000000)" fill="#39579A">
+            <g id="content" transform="translate(48.000000, 185.000000)">
+                <g id="main_content">
+                    <g id="facebook" transform="translate(0.000000, 333.000000)">
+                        <g transform="translate(24.000000, 17.000000)" id="Shape">
+                            <path d="M2.2671975,12 L2.25,6.75 L0,6.75 L0,4.5 L2.25,4.5 L2.25,3 C2.25,0.9756 3.5036325,0 5.309535,0 C6.1745775,0 6.918045,0.0644025 7.134705,0.0931875 L7.134705,2.2088025 L5.88222,2.2093725 C4.9000725,2.2093725 4.7099025,2.676075 4.7099025,3.36093 L4.7099025,4.5 L7.5,4.5 L6.75,6.75 L4.709895,6.75 L4.709895,12 L2.2671975,12 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

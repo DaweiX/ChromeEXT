@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="119px" height="117px" viewBox="0 0 119 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Option#3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Amanda-(Onboarding#2)" transform="translate(-1185.000000, -237.000000)" stroke-width="2">
+            <g id="panel" filter="url(#filter-1)" transform="translate(1030.000000, 40.000000)">
+                <g id="assets" transform="translate(80.000000, 201.000000)">
+                    <g id="icon" transform="translate(85.000000, 0.000000)">
+                        <polygon id="Shape" stroke="#E0E2E5" points="87.3121622 10.75 52.6135135 10.7675676 0.766216216 62.6108108 35.4486486 97.2972973 87.2959459 45.45"></polygon>
+                        <path d="M75.9324324,27.6554054 C75.9310811,29.1837838 75.3472973,30.7121622 74.1837838,31.877027 C71.8527027,34.2081081 68.0743243,34.2081081 65.7432432,31.8756757 C63.4121622,29.5445946 63.4094595,25.7662162 65.7418919,23.4364865 C66.9067568,22.2716216 68.4351351,21.6891892 69.9635135,21.6878378" id="Shape" stroke="#E0E2E5"></path>
+                        <path d="M17.5756757,62.0459459 L35.5702703,80.0432432" id="Shape" stroke="#E0E2E5"></path>
+                        <path d="M26.4689189,53.5972973 L44.4648649,71.5932432" id="Shape" stroke="#E0E2E5"></path>
+                        <polyline id="Shape" stroke="#E0E2E5" points="99.0283784 13.0824324 69.9635135 27.6554054 86.4472973 0.504054054"></polyline>
+                        <path d="M53.1418919,56.4554054 C49.9567568,59.6405405 44.7905405,59.6405405 41.6054054,56.4554054 L41.6054054,56.4554054 C38.4189189,53.2702703 38.4202703,48.1040541 41.6054054,44.9189189 L48.0648649,38.4594595 C51.2486486,35.2756757 56.4162162,35.2756757 59.6013514,38.4608108 L59.6013514,38.4608108 C62.7864865,41.6459459 62.7851351,46.8108108 59.6013514,49.9972973 L53.1418919,56.4554054 Z" id="Shape" stroke="#5266C4"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 250px;
+	font-size: 90%;
+	font-family: Trebuchet, Arial;
+	border-radius: 4px;
+}
+
+h1 {
+	margin: 0;
+	padding: 10px 15px;
+	font-size: 1em;
+	font-family: Arial;
+	background-color: #336;
+	color: #fff;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: #aaa;
+}
+
+ul {
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	width: 100%;
+	margin: 5px 0;
+	padding: 5px 0 5px 5px;
+	cursor: pointer; 
+	cursor: hand;	
+}
+
+ul li i {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	padding: 0 4px;
+}
+
+ul#actions li.add i {
+	background-image: url('chrome-extension://__MSG_@@extension_id__/img/plus.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+ul#actions li.remove i {
+	background-image: url('chrome-extension://__MSG_@@extension_id__/img/minus.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#settings i {
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url('chrome-extension://__MSG_@@extension_id__/img/settings.png');
+}
+
+
+ul li:hover {
+	background-color: #ccc;
+}
+
+.hidden {
+	display: none;
+}

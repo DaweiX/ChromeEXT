@@ -1,0 +1,294 @@
+div#prospector {
+  position: fixed;
+  bottom: 0px;
+  right: 5%;
+  height: 150px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+#prospector-list-selector {
+  max-width: 90%;
+}
+
+.prospector-profile {
+  position: absolute;
+  left: -125px;
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+.add-to-prospector {
+  display: inline-block;
+  padding: 0px 6px;
+  background-image: -webkit-linear-gradient(bottom, #ff6347 0%, #ff7f50 18%, #ffa07a 100%);
+  color: #fff !important;
+  font-size: 10px;
+  line-height: 18px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  vertical-align: top;
+  border: 1px solid #226dad;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,0.33), 0px 1px 1px 0px rgba(0,41,117,0.33);
+}
+
+#rcnt a.add-to-prospector:hover {
+  background-image: -webkit-linear-gradient(bottom, #ffa500 0%, #ff4500 18%, #ffa07a 100%);
+  text-decoration: none !important;
+}
+
+.add-to-prospector:active {
+  background-image: -webkit-linear-gradient(bottom, #1d7ae2 0%, #196fd0 100%);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.add-to-prospector.loading {
+  background: #eaeaea !important;
+  color: #a8a8a8 !important;
+  text-shadow: none;
+  border: 1px solid #c7c7c7;
+  box-shadow: none;
+  cursor: default;
+}
+
+.prospector-added {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: #468847;
+  color: white;
+  font-size: 12px;
+  line-height: 14px;
+  vertical-align: top;
+  border-radius: 3px;
+}
+
+.prospector-error {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: #468847;
+  color: red;
+  font-size: 12px;
+  line-height: 14px;
+  vertical-align: top;
+  border-radius: 3px;
+}
+
+
+.prospector-profile .prospector-existing {
+  display: block;
+  width: 120px;
+  margin-top: 5px;
+  color: #c66;
+  font-size: 11px;
+  text-align: center;
+  white-space: normal;
+}
+
+#prospector-modal-bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-radial-gradient(50% 50%, ellipse closest-corner, rgba(0,0,0,0.25) 1%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 1000;
+}
+
+#prospector-modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 350px;
+  margin-left: -175px;
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  opacity: 0;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-name: zoom-out;
+}
+
+#prospector-modal.in {
+  opacity: 1;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-name: zoom-in;
+}
+
+#prospector-modal h2 {
+  margin: 5px 0px;
+}
+
+#prospector-modal p {
+  margin-bottom: 0px;
+}
+
+#prospector-modal .add-to-prospector {
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+#prospector-modal-close {
+  float: right;
+  display: inline-block;
+  margin-top: 2px;
+  padding: 4px 12px;
+  background-image: -webkit-linear-gradient(bottom, #e4e4e4 0%, #f7f7f7 100%);
+  color: #666;
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,1), 0px 1px 1px 0px rgba(0,0,0,0.25);
+}
+
+#prospector-modal-close:hover {
+  text-decoration: none;
+}
+
+@-webkit-keyframes zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes zoom-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.98);
+  }
+}
+
+/* Results */
+
+#prospector .result-title,
+#result-actions,
+#result-list,
+#prospector .result-info {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#result-actions {
+    margin-bottom: 10px;
+}
+
+#prospector .result-title {
+    margin-top: 5px;
+}
+
+#prospector .result-title .logo {
+    width: 35px;
+    margin: 5px;
+}
+
+#prospector .result-title h2 {
+    display: inline;
+    position: relative;
+    top: -12px;
+    left: -5px;
+    font-size: 22px;
+}
+
+#prospector .result-title .alert {
+    margin-bottom: 10px;
+}
+
+#prospector a {
+  color: #08c;
+  text-decoration: none;
+}
+
+#prospector a:hover {
+  color: #005580;
+}
+
+#prospector .btn {
+  display: inline-block;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
+  line-height: 18px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+#prospector .btn:hover,
+#prospector .btn:focus,
+#prospector .btn:active {
+  color: white;
+  text-decoration: none;
+}
+
+#prospector .btn-add {
+  margin: 0px -2px;
+  padding: 4px 10px;
+  background-image: -webkit-linear-gradient(bottom, #2fa717 0%, #20930e 18%, #5ec63c 100%);
+  border: 1px solid #1c6f0b;
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,0.33), 0px 1px 1px 0px rgba(0,69,0,0.33);
+}
+
+#prospector .btn-add:hover {
+  background-image: -webkit-linear-gradient(bottom, #249311 0%, #1a7f0b 18%, #4bbb30 100%);
+}
+
+#prospector .btn-add:active {
+  background-image: -webkit-linear-gradient(bottom, #298a10 0%, #269713 100%);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#prospector .disabled {
+  background: #eaeaea !important;
+  color: #a8a8a8 !important;
+  text-shadow: none;
+  border: 1px solid #c7c7c7;
+  box-shadow: none !important;
+  cursor: default;
+}
+
+#prospector-add-all {
+  margin-right: -3px !important;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#prospector-add-and-next {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#prospector-view-results {
+  padding: 4px 12px;
+  background-image: -webkit-linear-gradient(bottom, #2d90e9 0%, #1d7ae3 18%, #5cb7f2 100%);
+  border: 1px solid #226dad;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,0.33), 0px 1px 1px 0px rgba(0,41,117,0.33);
+}
+
+#prospector-view-results:hover {
+  background-image: -webkit-linear-gradient(bottom, #207be2 0%, #186dde 18%, #50adf0 100%);
+}
+
+#prospector-view-results:active {
+  background-image: -webkit-linear-gradient(bottom, #1d7ae2 0%, #196fd0 100%);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+}

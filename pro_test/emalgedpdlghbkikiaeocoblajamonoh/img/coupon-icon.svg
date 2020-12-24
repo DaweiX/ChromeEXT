@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="33px" viewBox="0 0 36 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>coupon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Option#3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login-(Enter-Credentials)" transform="translate(-1227.000000, -643.000000)">
+            <g id="panel" filter="url(#filter-1)" transform="translate(1070.000000, 40.000000)">
+                <g id="bottom_bar" transform="translate(0.000000, 596.000000)">
+                    <g id="item#3" transform="translate(140.000000, 1.000000)">
+                        <g id="coupon" transform="translate(27.000000, 12.000000)">
+                            <path d="M13.8181818,5.81818182 C13.8181818,4.58181818 14.7636364,3.63636364 16,3.63636364 L16,0 L0,0 L0,3.63636364 C1.23636364,3.63636364 2.18181818,4.58181818 2.18181818,5.81818182 C2.18181818,7.05454545 1.23636364,8 0,8 L0,11.6363636 L16,11.6363636 L16,8 C14.7636364,8 13.8181818,7.05454545 13.8181818,5.81818182 Z" id="Shape" stroke="#868A9F" stroke-linecap="square"></path>
+                            <path d="M10.1818182,3.63636364 L5.81818182,8" id="Shape" stroke="#868A9F" stroke-linecap="square"></path>
+                            <ellipse id="Oval" fill="#868A9F" cx="6.18181818" cy="3.27272727" rx="1.09090909" ry="1.09090909"></ellipse>
+                            <ellipse id="Oval" fill="#868A9F" cx="9.81818182" cy="8.36363636" rx="1.09090909" ry="1.09090909"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

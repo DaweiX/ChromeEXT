@@ -1,0 +1,140 @@
+<div class="mc-row" data-each-coupon="coupons">
+    <div class="mc-col-8 mc-coupon">
+        <div class="mc-coupon-head">
+            <div class="mc-discount">{{ coupon.discount }}</div>
+
+            <div class="mc-category" data-show="coupon.isTypeOffer"><span class="mc-icon-tag"></span> Oferta</div>
+            <div class="mc-category" data-show="coupon.isTypeRegular"><span class="mc-icon-tag"></span> Cupom</div>
+            <div class="mc-category" data-show="coupon.isTypeLink"><span class="mc-icon-tag"></span> Cupom</div>
+            <div class="mc-category" data-show="coupon.isTypeProduct"><span class="mc-icon-tag"></span> Produto</div>
+
+            <div class="mc-top" data-show="coupon.featured"></div>
+        </div>
+        <div class="mc-fluid-row mc-coupon-container">
+            <div class="mc-fluid-col-2 mc-logo" data-on-click="onClickDescription" data-on-mouseover="onShowDescriptionOverToggle" data-on-mouseout="onShowDescriptionOverToggle">
+                <img data-src="coupon.storeLogo" data-hide="coupon.imageName">
+                <img data-src="coupon.imageName" data-show="coupon.imageName" class="mc-product-image">
+            </div>
+
+            <div class="mc-fluid-col-6 mc-content" data-on-click="onClickDescription" data-on-mouseover="onShowDescriptionOverToggle" data-on-mouseout="onShowDescriptionOverToggle">
+                <div class="mc-title">{{ coupon.name }}</div>
+                <div class="mc-description">{{ coupon.description }}</div>
+                <div class="mc-show-more" data-show="coupon.showShowMore"><div class="mc-show-more-plus"></div>
+                    <span data-show="showMore">Mostrar descrição</span>
+                    <span data-show="showLess">Esconder descrição</span>
+                    <span data-show="foundCoupon">
+                        <span class="cashback-rate" data-show="showCashbackInfo">
+                            <i class="cashback-icon"></i>+ <span data-html="store.cashbackPercentage"></span>% de volta
+                        </span>
+                    </span>
+                </div>
+
+            </div>
+
+            <!--Não achou cupons-->
+            <div class="mc-fluid-col-6 mc-fluid-span-2 mc-btn-panel" data-hide="foundCoupon">
+
+                <!--Is Regular Coupon-->
+                <div data-show="coupon.isTypeRegular">
+
+                    <!--Hide Code-->
+                    <div data-hide="coupon.showCode">
+                        <a
+                                data-href="coupon.linkUrl"
+                                target="meucupom-auto-open"
+                                class="mc-btn"
+                                data-on-click="onClickNotFound"
+                        ><span>Pegar Cupom</span></a>
+                    </div>
+
+                    <!--Show Code-->
+                    <div class="mc-code" data-show="coupon.showCode" data-hide="coupon.isTypeOffer">
+                        <input type="text" onclick="this.select();" data-value="coupon.code" data-on-click="onClickCode">
+                    </div>
+                </div>
+
+                <!--Is Offer Coupon-->
+                <div data-show="coupon.isTypeOffer">
+                    <a
+                            data-href="coupon.linkUrl"
+                            target="meucupom-auto-open"
+                            class="mc-btn"
+                            data-on-click="onClickNotFound"
+                    ><span>Ver Oferta</span></a>
+                </div>
+
+                <!--Is Product Coupon-->
+                <div data-show="coupon.isTypeProduct">
+                    <a
+                            data-href="coupon.linkUrl"
+                            target="meucupom-auto-open"
+                            class="mc-btn"
+                            data-on-click="onClickNotFound"
+                    ><span>Ver Produto</span></a>
+                </div>
+
+                <!--Is Link Coupon-->
+                <div data-show="coupon.isTypeLink">
+                    <a
+                            data-href="coupon.linkUrl"
+                            target="meucupom-auto-open"
+                            class="mc-btn"
+                            data-on-click="onClickNotFound"
+                    ><span>Pegar Cupom</span></a>
+                </div>
+            </div>
+
+            <!--Achou cupons-->
+            <div class="mc-fluid-col-6 mc-fluid-span-2 mc-btn-panel" data-show="foundCoupon">
+
+                <!--Is Regular Coupon-->
+                <div data-show="coupon.isTypeRegular">
+
+                    <!--Hide Code-->
+                    <div data-hide="coupon.showCode">
+                        <a
+                                data-href="coupon.linkUrl"
+                                target="meucupom-reactive-last-tab"
+                                data-on-click="onClick"
+                                class="mc-btn"
+                                ><span>Pegar Cupom</span></a>
+                    </div>
+
+                    <!--Show Code-->
+                    <div class="mc-code" data-show="coupon.showCode" data-hide="coupon.isTypeOffer">
+                        <input type="text" onclick="this.select();" data-value="coupon.code" data-on-click="onClickCode">
+                    </div>
+                </div>
+
+                <!--Is Offer Coupon-->
+                <div data-show="coupon.isTypeOffer">
+                    <a
+                            data-href="coupon.linkUrl"
+                            data-on-click="onClickSeeOfferProductLink"
+                            class="mc-btn"
+                            ><span>Ver Oferta</span></a>
+                </div>
+
+                <!--Is Product Coupon-->
+                <div data-show="coupon.isTypeProduct">
+                    <a
+                            data-href="coupon.linkUrl"
+                            data-on-click="onClickSeeOfferProductLink"
+                            class="mc-btn"
+                            ><span>Ver Produto</span></a>
+                </div>
+
+                <!--Is Link Coupon-->
+                <div data-show="coupon.isTypeLink">
+                    <a
+                            data-href="coupon.linkUrl"
+                            data-on-click="onClickSeeOfferProductLink"
+                            class="mc-btn"
+                            ><span>Pegar Cupom</span></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

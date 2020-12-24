@@ -1,0 +1,11 @@
+{
+  "name": "aweb",
+  "version": "1.0.1",
+  "description": "Front web framework search engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

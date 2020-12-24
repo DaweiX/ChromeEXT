@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>fullfield</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="fullfield-icon" fill="#000000">
+            <g id="Option#3">
+                <g id="Main-Feed-(Product-Options)">
+                    <g id="panel">
+                        <g id="list">
+                            <g id="item#1">
+                                <g id="Group">
+                                    <g id="dropdown">
+                                        <g id="item#3">
+                                            <g id="fullfield">
+                                                <polygon id="Shape" points="5.90909091 8.4747114 3.72727273 6.29289322 3.02016595 7 5.90909091 9.88892496 10.9798341 4.81818182 10.2727273 4.11107504"></polygon>
+                                                <path d="M1.5,12.5 L12.5,12.5 L12.5,1.5 L1.5,1.5 L1.5,12.5 Z M13.5,0.5 L13.5,13.5 L0.5,13.5 L0.5,0.5 L13.5,0.5 Z" id="Rectangle-path"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

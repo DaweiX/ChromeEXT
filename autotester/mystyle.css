@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #faf6e3;
+    height: 100%;
+    width: 320px;
+}
+
+.center {
+    text-align: center
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    width: 40px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    top: 0;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+
+/*居中*/
+.center {
+    display: inline-block;
+    display: table;
+    margin: 0 auto;
+}
+
+.wrap {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    max-height: 500px;
+    margin: 100px 0 120px 0;
+    /*80可以变，大于footer高度：32px（2em）*/
+}
+
+
+.p {
+	font-size: 'xx-small';
+}
+
+
+.list {
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+	height: 100%;
+    margin: 0 0 24px 0;
+}
+
+/*导航列表项*/
+
+.item {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: black;
+    text-align: left;
+    font-size: 16px;
+    padding: 4px;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 8px 10px 0px 10px;
+    outline: none;
+}
+
+.icon{
+    width: 12px;
+    height: 12px;
+    margin: 0px;
+}
+
+.item div {
+    display: inline-block;
+    transition: 0.5s;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+}
+
+
+body:after {
+    content: "自动测试工具 试作型";
+    height: 2em;
+    font-size: 0.8em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0px;
+    width: 100%;
+    color: white;
+}

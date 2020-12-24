@@ -1,0 +1,128 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147234252-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147234252-1');
+</script>
+
+
+
+<div id="meucupom-extension">
+    <div id="mc-login-modal" class="mc-login-modal" login-class-dismissed="isLoginDismissed">
+
+        <div class="login-form-wrapper">
+            
+            
+            <div class="logo-img-complete"></div>
+
+            <p class="login-form-text">Faça login converter parte do valor das compras em cashforward!</p>
+
+            <a href="https://www.meucupom.com/fb-login-plugin" target="_blank" class="fb-login-btn"></a>
+
+            <div class="mc-line">
+                <span>OU</span>
+            </div>
+
+            <form action="" id="mc-login-form" class="mc-login-form">
+                <input type="mail" id="email" name="email" placeholder="E-mail" class="mc-form-input" login-value="login">
+                <input type="password" id="password" name="password" placeholder="Senha" class="mc-form-input" login-value="password">
+
+                <input type="submit" class="mc-form-submit-btn" value="Login" login-on-click="loginAction">
+            </form>
+
+            <div class="links-wrapper">
+                <a href="https://www.meucupom.com/cadastro-passo-1?utm_source=plugin&utm_campaign=signin-screen" target="_blank" class="register-button">Cadastre-se</a>
+                <a href="javascript:;" class="dismiss-login" login-on-click="dismissLoginModal">Continuar sem login</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="mc-dialog-box" class="mc-dialog-box">
+        <div data-html="message"></div>
+        <button class="mc-btn-ok" data-on-click="onGotIt"><span>Entendi</span></button>
+    </div>
+
+    <div class="mc-top-bar" id="top-bar">
+        <div class="mc-tag" top-bar-on-click="togglePlugin">
+            <div class="mc-tag-logo-name"></div>
+            <div class="mc-tag-logo-img"><span data-show="showCounterBall">{{ offersCount }}</span></div>
+        </div>
+        <div class="mc-user-info">
+            <div class="mc-username-wrapper" top-bar-hide="userLogged">
+                <a href="#" top-bar-on-click="showLoginModal">Login</a>
+                <span class="mc-icon- icon-usuario"></span>
+            </div>
+            <div class="mc-username-wrapper" top-bar-show="userLogged">
+                <a href="javascript:;" class="mc-username" top-bar-html="user.name"></a>
+                <div class="logout-tooltip">
+                    <a href="#" class="mc-logout-btn" top-bar-on-click="logoutRequest">Logout</a>
+                </div>
+                <div class="profile-image-wrapper">
+                    <img top-bar-src="user.avatar_url">
+                </div>
+            </div>
+        </div>
+        <div class="mc-close"></div>
+        <div class="mc-minimize">
+            
+        </div>
+    </div>
+
+    <div id="retractable">
+        <div class="mc-gray"><div class="mc-line"></div></div>
+        <div id="mc-cashback">
+            <div class="cashback-cta" cashback-hide="userLogged">
+                <div class="mc-col-1" style="text-align: right;">
+                    <span class="mc-cashback-icon" cashback-show="store.cashbackOn"></span>
+                </div>
+                <div class="mc-col-6" style="margin-left: 10px;">
+                    <div>
+                        <p class="mc-cashback-cta mc-clickable" top-bar-on-click="showLoginModal">
+                            <span cashback-show="store.cashbackOn">Compre nessa loja e ajude o Craque do Amanhã com <span cashback-html="store.cashbackPercentage"></span>% do valor em cashforward!</span>
+                            <span cashback-hide="store.cashbackOn">Faça o login e acompanhe o MeuCupom</span>
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://www.meucupom.com/devolve" class="cb-more-info" target="_blank"><i class="mc-icon- icon-saiba_mais"></i>Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cashback-user-data" cashback-show="userLogged">
+                <div class="cashback-info-left">
+                    <p class="cashback-title">Compre e ajude</p>
+                    <a href="https://www.meucupom.com/devolve" target="_blank" class="cb-more-info"><i class="mc-icon- icon-saiba_mais"></i>Saiba mais</a>
+                </div>
+                <div class="cashback-info-right mc-clickable" onclick="window.open('https://www.meucupom.com/perfil/dinheiro-de-volta')">
+                    <div class="avaiable-value">
+                        <span class="picpay-green"></span>
+                        <div class="value-wrapper">
+                            <span class="value" cashback-html="cashback.available">-</span>
+                            <span class="section-title">Aprovado</span>
+                        </div>
+                    </div>
+                    <div class="pending-value">
+                        <span class="picpay-gray"></span>
+                        <div class="value-wrapper">
+                            <span class="value" cashback-html="cashback.pending">-</span>
+                            <span class="section-title">Pendente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mc-gray"><div class="mc-line"></div></div>
+
+        <div id="coupons" class="mc-coupons"></div>
+
+        <div class="mc-go-to-meucupom"><a href="http://meucupom.com" target="_blank">Ir para MeuCupom.com ></a></div>
+    </div>
+
+    <div class="mc-bottom-description" id="mc-description">
+        <div>{{ description }}</div>
+    </div>
+
+</div>

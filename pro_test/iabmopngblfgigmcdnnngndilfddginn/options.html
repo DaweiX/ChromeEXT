@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project Activity Checker - Settings</title>
+        <link rel="stylesheet" type="text/css" href="lib/color/jquery.minicolors.css" />
+        <link rel="stylesheet" type="text/css" href="options.css" />
+        <link rel="stylesheet" type="text/css" href="pinterest.css" />
+        <link rel='shortcut icon' type='image/png' href='/img/pac16.png' />
+        <script src="lib/tracker.js"></script>
+        <script src="lib/underscore-1.6.0.min.js"></script>
+        <script src="lib/jquery-2.0.3.min.js"></script>
+        <script src="options.js"></script>
+        <script src="options_ui.js"></script>
+    </head>
+
+    <body class="option-page">
+        <small id="version"></small>
+
+        <h1><img src="img/pac48.png" /> Project Activity Checker Settings</h1>
+        <hr/>
+        <br/>
+
+        <h3>General</h3>
+        <ul>
+            <li><input type='checkbox' id='checker-mode'/> Enable project activity checker</li>
+        </ul>
+
+        <h3>Activity Checker</h3>
+        <ul>
+            <li>Refresh interval of project activity in seconds<input type='text' id='refresh-interval'/></li>
+        </ul>
+
+        <h3>Icon and Status</h3>
+        <ul>
+            <li><input type='checkbox' id='show-provider-icon'/> Show icon after project link</li>
+            <li><input type='checkbox' id='show-provider-last-time-commit'/> Show project last time commit after project link</li>
+            <li><input type='checkbox' id='show-provider-last-time-commit-as-title'/> Show project last time commit as a link title</li>
+            <li><input type='checkbox' id='show-provider-extended-status'/> Show project extended status when mouse over icon</li>
+        </ul>
+
+        <h3>Blacklist</h2>
+        <ul>
+            <li>Disable extension for the following sites</li>
+            <li><textarea id='blacklist-sites'/></textarea></li>
+            <li class='help'>One site or regular expression per line. You can use <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions'>regular expressions</a>.</li>
+        </ul>
+
+        <span id="status"></span>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="favourite-active-icon" fill="#8A3BD1">
+            <g id="Option#3">
+                <g id="Favorite-Product-Interaction">
+                    <g id="panel">
+                        <g id="list">
+                            <g id="item#1">
+                                <g id="Group">
+                                    <g id="bottom-options">
+                                        <g>
+                                            <g id="heart-active">
+                                                <path d="M14.1701,1.2299 C12.53,-0.4102 9.8707,-0.4102 8.2306,1.2299 C8.0283,1.4322 7.8526,1.6499 7.7007,1.8788 C7.5488,1.6499 7.3724,1.4315 7.1708,1.2299 C5.5307,-0.4102 2.8714,-0.4102 1.2313,1.2299 C-0.4088,2.87 -0.4088,5.5293 1.2313,7.1694 L7.7,13.6395 L14.1701,7.1694 C15.8102,5.5293 15.8102,2.87 14.1701,1.2299 Z" id="Shape"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

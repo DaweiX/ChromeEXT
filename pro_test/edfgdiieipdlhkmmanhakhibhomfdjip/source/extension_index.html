@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/new_extension.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/smartadmin-production.min.css">
+</head>
+<style>
+    html, body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        height: 100% !important;
+    }
+</style>
+<body ng-app="clodura_extension" style="margin: 0px;" ng-controller="ExtensionAppCtrl" ng-init="init()">
+    <div class="clodura-MainContainer" style="height: 100%;">
+        <div class="clodura-leftNav" id="grad1">
+            <div style="margin-top:21px" ng-if="loggedin">
+                    <span style="margin-top:130px;margin-top: 91px;margin-left: 21px;font-weight:600;font-size: 15px;color:white;" title="{{username}}">
+                        {{initials}}  <p class="clodura-hr-line" ></p>
+                    </span>
+            </div>
+            <div class="button hover_class" style="margin-top:0px;height: 41px;cursor: pointer;" id="button" ng-if="loggedin" ng-click="company_page_ui()">
+                    <span style="margin-top:130px;margin-top: 91px;margin-left: 24px;">
+                        <img src="https://product.clodura.ai/client/app/assets/images/company-active.png" style="padding-top:12px">
+                    </span>
+            </div>
+            <div class="prospect_active hover_class" style="margin-top:16px;height: 41px;cursor: pointer" id="clodura_prosp" ng-if="loggedin && !listurls" ng-click="prospect_page_ui()">
+                    <span style="margin-top:130px;margin-top: 91px;margin-left: 25px;">
+                        <img src="https://product.clodura.ai/client/app/assets/images/prospect-active.png" style="padding-top:12px">
+                    </span>
+            </div>
+            <div class="prospect_active hover_class" style="margin-top:16px;height: 41px;cursor: pointer" id="clodura_prosp" ng-if="loggedin && listurls">
+            </div>
+            <!--        <div >-->
+            <div class="clodura-collapse-button hover_class" ng-if="loggedin" style="margin-top:130px;cursor: pointer;padding-left:27px;height: 41px;" title="collapse" id="clodura_collapse" ng-click="toggle_window()">
+                <i class="fa fa-chevron-right" style="color:white;font-size:15px;padding-top:12px"></i>
+            </div>
+            <div class="clodura-collapse-button hover_class" ng-if="!loggedin" style="margin-top:300px;cursor: pointer;padding-left:27px;height: 41px;" title="collapse" id="clodura_collapse" ng-click="toggle_window()">
+                <i class="fa fa-chevron-right" style="color:white;font-size:15px;padding-top:12px"></i>
+            </div>
+
+            <!--        </div>-->
+            <div class="hover_class" style="margin-top:230%;padding-left:27px;height: 41px;cursor: pointer" ng-if="loggedin" ng-click="settings_page_ui()">
+                <div title="settings" id="clodura_settings">
+                    <i class="fa fa-cog" style="color:white;padding-top:12px;font-size:16px"></i>
+                </div>
+            </div>
+
+            <div class="hover_class" style="padding-left:27px;height: 41px;cursor: pointer" title="Sign out" id="clodura_logout" ng-click="logout()" ng-if="loggedin">
+                <i class="fa fa-power-off" style="color:white;padding-top:12px;font-size:16px"></i>
+            </div>
+        </div>
+        <div class="clodura-rightHead">
+            <div style="padding-left:20%;" ng-if="loggedin">
+                <p style="display:inline;margin-top:2px;font-size:11px;padding-left:165px;margin:0">Remaining Credits : {{current_credits}}</p>
+<!--                <p style="display:inline;margin-top:2px;font-size:11px;padding-left:8px;margin:0">Phone Credits : {{phone_credits}}</p>-->
+            </div>
+            <div ng-if="(loggedin  && !click_settings)">    <!--&& !loader_flag-->
+                <div ng-if="no_company_data">
+                    <div ng-if="no_company_data" class="clodura-company-header">
+                        <div class="clodura-circlearancione" title="{{company_data.company_name}}">
+                            <h3 class="" style="font-size: 19px;">{{company_data.company_name | limitTo: 23 }}{{company_data.company_name.length > 23 ? '..' : ''}}</h3>
+                        </div>
+                    </div>
+                    <div ng-if="no_company_data" style="cursor: pointer;margin-bottom: 10%">
+                        <button id="addtoradar" type="button" ng-if="!(current_url.includes('linkedin')) && !(listurls) " class="btn btn-sm btn-default clodura-blueOutlinedBtn pull-right" title="Add to Radar" style="border-radius: 6px;border-color: grey;margin-left: 3%;margin-right: 3%;" ng-click="add_comp_to_radar()">Add to Radar</button>
+                        <a target="_blank" class="pull-right" style="margin-left: 3%;" href="https://product.clodura.ai/#!/app/company" title="Go to Radar"><button type="button" class="btn btn-sm btn-default clodura-blueOutlinedBtn" style="border-radius: 6px;border-color: grey;color:black">Go to Radar</button></a>
+                        <a class="pull-right" ng-if="!(listurls)" target="_blank" style="margin-left: 3%;" href="{{company_data.linkedin_link}}" title="Go to Linkedin link"><i class="fa fa-linkedin clodura-gradient-text" style="font-size:16px;color:#0a558c;padding-top: 4px;"></i></a>
+                        <a class="pull-right" target="_blank" href="{{company_data.website}}" title="{{company_data.website}}"><i class="fa fa-globe clodura-gradient-text" style="font-size:16px;color:#0a558c;padding-top: 6px;"></i></a>
+                        <a id="backkey" class="pull-right"  title="Go back to Company list" style="padding-right:10px" ng-if="go_back_flag && !singleurl" ng-click="go_back()"><i class="fa fa-angle-double-left clodura-gradient-text" style="font-size:21px;color:#0a558c;padding-top: 4px;font-weight: 500"></i></a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div ng-if="loader_flag" class="clodura-loader"></div>
+            <div ng-view style="height: 100%;width: 100%;"></div>
+            <div id="clodura_footer"><img style="width:120px;height:20px;margin-top:10px;padding-left:15px" src="../img/clodura-ai.png"/></div>
+        </div>
+    </div>
+
+<!-- Do not load angular.js  & angular-route.js & extension_routes.js file in manifest.json, Load the files in index.html.-->
+    <script src="../js/angular/angular.js"></script>
+    <script src="../js/angular-route.js"></script>
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="Extensionapp/extension_routes.js"></script>
+    <script src="common/constants.js"></script>
+    <script src="Extensionapp/extension_app.js"></script>
+    <script src="company/new_login.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+</body>
+</html>

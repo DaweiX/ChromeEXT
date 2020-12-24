@@ -1,0 +1,1 @@
+This Chrome extension help to capture Screen using Tiviclick Video Chat.

@@ -1,0 +1,83 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+/* Log In */
+
+body.login {
+    width: 180px;
+    padding: 10px;
+    text-align: center;
+}
+
+body.login p {
+    color: #666;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 16px;
+}
+
+body.login a:focus {
+    outline: none;
+}
+
+/* Popup */
+
+body.search {
+    padding: 5px 8px;
+}
+
+body.search .nav {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+body.search .nav-tabs > li > a {
+    padding: 2px 10px;
+    outline: none;
+}
+
+#basic-search {
+    display: none;
+    margin-bottom: 5px;
+}
+
+#basic-query {
+    width: 243px;
+}
+
+#advanced-search {
+    display: none;
+    margin-bottom: 5px;
+}
+
+.short-results .select2-results {
+    max-height: 110px;
+}
+
+.actions {
+    float: right;
+    overflow: hidden;
+    min-width: 301px;
+    margin-bottom: 7px;
+}
+
+body.search label {
+    display: inline-block;
+    font-size: 12px;
+}
+
+body.search select {
+    width: 100px;
+    height: 20px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+body.search select:focus {
+    outline: 0;
+}
+

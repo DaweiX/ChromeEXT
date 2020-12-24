@@ -1,0 +1,34 @@
+<div class="mc-single mc-col-8">
+    <div class="mc-fluid-row">
+        <div class="mc-fluid-col-8 mc-single-content">
+            <div class="centre">
+                <p data-show="coupon.isTypeRegular">Copie e cole o código abaixo na página do carrinho de compras.</p>
+                <p data-show="coupon.isTypeOffer">Você já está aproveitando!</p>
+                <p data-show="coupon.isTypeProduct">Você já está aproveitando!</p>
+                <div data-show="coupon.isTypeLink">
+                    <h4>Você já está aproveitando!</h4>
+                    <p>Seu desconto será ativado nos produtos ou no carrinho de compra.</p>
+                </div>
+                <p class="mc-title">{{ coupon.name }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mc-fluid-row" data-show="coupon.isTypeRegular">
+        <div class="mc-fluid-col-8">
+            <div class="mc-code">
+                <input type="text" onclick="this.select();" data-value="coupon.code" data-on-click="onClickCode">
+            </div>
+        </div>
+    </div>
+
+    <div class="mc-fluid-row mc-links">
+        <div class="mc-fluid-col-4">
+            &nbsp;
+            <a href="javascript:void(0);" data-show="coupon.description" data-on-click="onToggleDescription"><span class="mc-icon-file-add"></span> Mais detalhes</a>
+        </div>
+        <div class="mc-fluid-col-4 mc-last">
+            <a href="javascript:void(0);" data-on-click="onClickListAllCoupons">Ver todos os cupons <span class="mc-icon-pig"></span></a>
+        </div>
+    </div>
+</div>

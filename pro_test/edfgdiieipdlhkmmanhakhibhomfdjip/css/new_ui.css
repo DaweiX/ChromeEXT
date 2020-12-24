@@ -1,0 +1,122 @@
+.add_one_btn{
+    background-color: transparent;
+    border: solid;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #b6b6b6;
+    cursor: pointer;
+    display: inline-block;
+    border-width: 1px;
+    padding: 1px 4px 25px 5px;
+    margin-top: 34px;
+    margin-left: 12px;
+    height: 20px;
+    /*border-color: red;*/
+}
+.add_all_btn{
+    margin-bottom: 15px;
+    background: white;
+    height: 37px;
+    width: 90px;
+    font-size: 13px;
+    padding: 0px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+}
+.add_all_comp_btn{
+    margin-bottom: 15px;
+    background: white;
+    height: 37px;
+    width: 90px;
+    font-size: 13px;
+    padding: 0px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+}
+.add_comp_btn{
+    vertical-align: middle;
+    background: white;
+    height: 31px;
+    width: 85px;
+    font-size: 13px;
+    padding: 0px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+    white-space:nowrap;
+}
+.add_prosp_btn{
+    margin-left:20px;
+    vertical-align: middle;
+    background: white;
+    height: 31px;
+    width: 85px;
+    font-size: 13px;
+    /*padding: 0px 0px;*/
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+}
+.loader_add_all{
+    margin-bottom: 15px;
+    background: white;
+    height: 37px;
+    width: 90px;
+    font-size: 13px;
+    padding: 0px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+    padding-top: 6px;
+}
+.sales_navigator_single_btn{
+    background-color: transparent;
+    border: solid;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #b6b6b6;
+    cursor: pointer;
+    display: inline-block;
+    border-width: 1px;
+    height: 28px;
+    float: right;
+    margin-top: 7px;
+    margin-right: 105px;
+}
+.sales_navi_all_prospect{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: white;
+    height: 37px;
+    width: 90px;
+    font-size: 13px;
+    padding: 0px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+}
+.pagination_class{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 37px;
+    width: 90px;
+    font-size: 13px;
+    padding: 0px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+}
+.sales_navi_all_companies{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: white;
+    height: 37px;
+    width: 90px;
+    font-size: 13px;
+    padding: 0px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: #0084bf;
+}

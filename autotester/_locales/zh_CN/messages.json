@@ -1,0 +1,386 @@
+{
+	"extName": {
+		"message": "自动测试工具"
+	},
+	"extDesr": {
+		"message": "用于自动化对已安装浏览器拓展的测试"
+	},
+	"tipSetSuc": {
+		"message": "设置成功！"
+	},
+	"tipResetRank": {
+		"message": "已重置排序！"
+	},
+	"sizeSmall": {
+		"message": "缩小"
+	},
+	"sizeNormal": {
+		"message": "标准"
+	},
+	"sizeBig": {
+		"message": "放大"
+	},
+	"optionName": {
+		"message": "选项配置"
+	},
+	"showMod": {
+		"message": "显示模式："
+	},
+	"showListMod": {
+		"message": "列表视图"
+	},
+	"showGridMod": {
+		"message": "网格视图"
+	},
+	"showCols": {
+		"message": "显示列数："
+	},
+	"iconSize": {
+		"message": "图标大小："
+	},
+	"speedManageName": {
+		"message": "闪电管理："
+	},
+	"speedManageDesc": {
+		"message": "一键禁用全部扩展（已被锁定的扩展+主题插件除外）"
+	},
+	"speedManageLock": {
+		"message": "点击下面的图标“锁定”或“解锁”扩展"
+	},
+	"rankName": {
+		"message": "扩展排序："
+	},
+	"sortByName": {
+		"message": "根据扩展名称排序"
+	},
+	"sortByRank": {
+		"message": "根据开启频率排序"
+	},
+	"rankBtn": {
+		"message": "重置排序"
+	},
+	"otherName": {
+		"message": "支持："
+	},
+	"otherDesc": {
+		"message": "同时，也可以登陆 <a>Chrome 网上应用店</a> 给予好评 或 提供支持性建议"
+	},
+	"otherDonate": {
+		"message": "如果您对它还算满意，可以给予我一点赞赏，激励我持续免费的完善它 :-)"
+	},
+	"showBadgeName": {
+		"message": "显示角标："
+	},
+	"showBadgeDesc": {
+		"message": "通过角标显示临时启用的扩展数量(已经启用，但未被锁定）"
+	},
+	"showFastName": {
+		"message": "显示快捷图标："
+	},
+	"showFastDesc": {
+		"message": "弹出面版中的快捷设置图标"
+	},
+	"showExtName": {
+		"message": "显示扩展名："
+	},
+	"showExtNameDesc": {
+		"message": "鼠标滑过扩展图标时显示其名称"
+	},
+	"showGridExtName": {
+		"message": "网格模式下显示扩展名称"
+	},
+	"showGridExtDesc": {
+		"message": "在左侧菜单栏-名称设置，设置扩展别名，否则显示默认别名。"
+	},
+	"showGridExtTip": {
+		"message": "开启后，[根据扩展名称排序]规则将会改为[根据扩展别名排序]"
+	},
+	"optionNameModifyName": {
+		"message": "输入扩展别名，建议中文保留4个字符，其它语言保留8个字符"
+	},
+	"feedback_desc": {
+		"message": "您有改进建议，问题，缺少一些配置选项或发现bug？为了提高扩展的体验，我很高兴您提供的每一个反馈。"
+	},
+	"feedback_send": {
+		"message": "发送反馈"
+	},
+	"feedback_success": {
+		"message": "感谢您的反馈"
+	},
+	"feedback_fail": {
+		"message": "您的信息发送失败，请重试。"
+	},
+	"feedback_screenshot": {
+		"message": "附加截图"
+	},
+	"feedback_error_amount": {
+		"message": "上传屏幕截图数量超过限制"
+	},
+	"feedback_error_filesize": {
+		"message": "文件尺寸太大（> 1 MB）"
+	},
+	"feedback_process": {
+		"message": "正在发送, 请稍后"
+	},
+	"feedback_headline": {
+		"message": "或许你对这些感兴趣"
+	},
+	"feedback_suggestion1": {
+		"message": "如何快速启用和关闭扩展？"
+	},
+	"feedback_answer1": {
+		"message": "点击扩展图标即可启用和关闭扩展。"
+	},
+	"feedback_suggestion2": {
+		"message": "什么是锁定？"
+	},
+	"feedback_answer2": {
+		"message": "我们鼓励用户对扩展进行分组，“锁定”意味着该扩展和该组绑定在一起。当你需要临时启用某些扩展的时候，你可以通过点击扩展图标启用扩展，用完后，点击恢复按钮还原扩展组状态。"
+	},
+	"feedback_suggestion3": {
+		"message": "什么是重置？"
+	},
+	"feedback_answer3": {
+		"message": "快速关闭临时使用扩展（未锁定）"
+	},
+	"tipsTitle": {
+		"message": "未安装任何扩展 :-)"
+	},
+	"tipsCon": {
+		"message": "去逛一逛"
+	},
+	"tipsUrl": {
+		"message": "Chrome 网上应用店"
+	},
+	"rightLock_unlock": {
+		"message": "解锁"	
+	},
+	"rightLock_lock": {
+		"message": "锁定"	
+	},
+	"rightOption": {
+		"message": "选项"	
+	},
+	"rightAppLaunch": {
+		"message": "运行"	
+	},
+	"rightUninstall": {
+		"message": "卸载"	
+	},
+	"rightHomepage": {
+		"message": "主页"	
+	},
+	"rightMoreName": {
+		"message": "右键菜单："
+	},
+	"rightMoreDesc": {
+		"message": "在扩展图标上右键可操作更多功能"
+	},
+	"emptyShowListCon": {
+		"message": "没有启用的扩展"
+	},
+	"closeAllBtn": {
+		"message": "重置"
+	},
+	"changeViewBtn": {
+		"message": "切换"
+	},
+	"searcherPlaceholder": {
+		"message": "搜索扩展"
+	},
+	"searcherEmpty": {
+		"message": "没有找到相关扩展或应用"
+	},
+	"defaultGroupName": {
+		"message": "默认分组"
+	},
+	"newGroupName": {
+		"message": "新分组"
+	},
+	"optionGroupTitle": {
+		"message": "分组管理"
+	},
+	"optionGroupDesc": {
+		"message": "通过分组闪电管理扩展状态，适配不同场景，比如家、公司。"
+	},
+	"optionGroupOperat": {
+		"message": "在当前分组下，通过点击扩展图标点亮后进行分组锁定。"
+	},
+	"optionGroupModifyName": {
+		"message": "请输入分组名称，最好请保持在2~6个汉字"
+	},
+	"optionGroupDelete": {
+		"message": "确定要删除该分组吗？"
+	},
+	"optionGroupDeleteAtLeaseOne": {
+		"message": "至少保留一个分组！"
+	},
+	"fixGroupDesc": {
+		"message": "固定分组下的扩展将会一直保持开启状态，您可以将常用扩展加入分组。"
+	},
+	"fixGroupOperat": {
+		"message": "通过点亮扩展图标进行分组锁定"
+	},
+	"nameExtDesc": {
+		"message": "给每个扩展起一个你喜欢的名字"
+	},
+	"nameExtOperat": {
+		"message": "点击修改图标，给扩展起名，在基本设置里打开这个功能才能生效，由于浏览器的限制，别名暂时不能自动同步。"
+	},
+	"ruleExtDesc": {
+		"message": "根据不同网站管理相关的扩展"
+	},
+	"ruleExtWhat": {
+		"message": "什么叫做规则？"
+	},
+	"ruleExtList": {
+		"message": "规则列表"
+	},
+	"ruleExtThNumber": {
+		"message": "序号"
+	},
+	"ruleExtThExt": {
+		"message": "扩展"
+	},
+	"ruleExtThUrl": {
+		"message": "匹配"
+	},
+	"ruleExtThOperate": {
+		"message": "操作"
+	},
+	"ruleAdd": {
+		"message": "新增规则"
+	},
+	"ruleSave": {
+		"message": "保存规则"
+	},
+	"cancel": {
+		"message": "取消"
+	},
+	"ruleWildcard": {
+		"message": "域名通配符地址"
+	},
+	"ruleMaxNum": {
+		"message": "超过可配置的最大规则数量:"
+	},
+	"ruleMaxExtNum": {
+		"message": "超过可配置的最大扩展数量:"
+	},
+	"ruleUrlEmpty": {
+		"message": "地址不能为空"
+	},
+	"ruleExtEmpty": {
+		"message": "未选定扩展"
+	},
+	"ruleTipTitle1": {
+		"message": "场景举例"
+	},
+	"ruleTipContent1": {
+		"message": "<p style='color:#509EE3;font-weight: bold;'>场景：进入亚马逊购物网站，打开扩展Honey购物插件</p><p style='color:#509EE3;font-weight: bold;'>规则：匹配网址[<span style='color:red;'>*amazon.com*</span>]，扩展[Honey]</p>"
+	},
+	"ruleTipTitle2": {
+		"message": "地址设置方法"
+	},
+	"ruleTipContent2": {
+		"message": "<p style='color:#509EE3;font-weight: bold;'>什么是通配符</p><span><span style='font-weight: bold;'>星号</span> <span style='color:red;font-weight: bold;'>*</span> 匹配零个或者多个字符。</p><p><span style='font-weight: bold;'>问号</span> <span style='color:red;font-weight: bold;'>?</span> 匹配任意一个字符。</p></br><p>请注意以 <span style='color:red;font-weight: bold;'>*.</span> 开头的规则有特别处理，会同时匹配子域名和自身。</p><p>例如: <span style='color:red;font-weight: bold;'>*.example.com</span> 能匹配 www.example.com ，<span style='font-weight: bold;'>而且也能匹配 example.com</span> 。</p><p>如果<span style='font-weight: bold;'>只需要匹配子域名</span>，请使用<span style='font-weight: bold;'>两个</span>星号开头，如 <span style='color:red;font-weight: bold;'>**.example.com</span>。</p></br><span style='color:#509EE3;font-weight: bold;'>举例</span><p>模式:<span style='color:red;font-weight: bold;'>*.example.com</span> (或 <span style='color:red;font-weight: bold;'>.example.com</span>)</p><p>匹配:a.example.com, a.b.example.com, example.com</p><p>不匹配:example.test, example.com.test, anotherexample.com</p></br><p style='color:#509EE3;font-weight: bold;'>常用配置</p><p>匹配amazon所有页面：<span style='color:red;font-weight: bold;'>*amazon.com*</span></p><p>匹配taobao商品页面：<span style='color:red;font-weight: bold;'>*item.taobao.com*</span></p>"
+	},
+	"optionRuleDelete": {
+		"message": "确定要删除该规则吗？"
+	},
+	"howToSet": {
+		"message": "如何设置？"
+	},
+	"viewSetMenu": {
+		"message": "基本设置"
+	},
+	"appearance": {
+		"message": "外观："
+	},
+	"backup": {
+		"message": "数据备份"
+	},
+	"export_options": {
+		"message": "导出"
+	},
+	"import_options": {
+		"message": "导入"
+	},
+	"backupDesc": {
+		"message": "不同设备登陆同一个Google账号可自动同步（扩展别名除外）"
+	},
+	"failed_to_import": {
+		"message": "导入失败"
+	},
+	"success_to_import": {
+		"message": "导入成功，请重新加载页面读取最新配置！"
+	},
+	"light": {
+		"message": "浅色"
+	},
+	"dark": {
+		"message": "深色"
+	},
+	"automatic": {
+		"message": "自动跟随系统"
+	},
+	"showModMenu": {
+		"message": "显示模式"
+	},
+	"showColsMenu": {
+		"message": "显示列数"
+	},
+	"iconSizeMenu": {
+		"message": "图标大小"
+	},
+	"showThemeMenu": {
+		"message": "显示外观"
+	},
+	"showBadgeNameMenu": {
+		"message": "显示角标"
+	},
+	"optionGroupTitleMenu": {
+		"message": "分组管理"
+	},
+	"commonGroup": {
+		"message": "普通分组"
+	},
+	"fixGroup": {
+		"message": "固定分组"
+	},
+	"rankNameMenu": {
+		"message": "扩展排序"
+	},
+	"ruleMenu": {
+		"message": "规则"
+	},
+	"feedbackMenu": {
+		"message": "反馈"
+	},
+	"supportMenu": {
+		"message": "支持"
+	},
+	"nameMenu": {
+		"message": "名称设置"
+	},
+	"resetTipTitle": {
+		"message": "如果这是您第一次使用重置功能"
+	},
+	"resetTipContent": {
+		"message": "重置的含义是将没有锁定的扩展从当前分组中移除，恢复当前分组的状态，建议您先进行<span style='color:#00aced'>分组</span>或者先<span style='color:#00aced'>锁定</span>扩展。"
+	},
+	"resetTipDangerText": {
+		"message": "继续重置"
+	},
+	"resetTipCancelText": {
+		"message": "我要分组"
+	},
+	"updateTipTitle": {
+		"message": "更新提示"
+	},
+	"updateTipContent": {
+		"message": "<p style='font-size:15px;'>1.给扩展设置你喜欢的名字</p><p>通过<span style='color:#00aced'>设置-名称设置</span>里设置你喜欢的名字，之后在<span style='color:#00aced'>基本设置</span>里启用<span style='color:#00aced'>网格模式下显示扩展名称</span>功能。</p><p style='font-size:15px;'>2.根据不同网站管理扩展</p><p>通过<span style='color:#00aced'>设置-规则</span>，根据不同网站管理扩展。</p>"
+	},
+	"tipConfirmText": {
+		"message": "我知道了"
+	}
+}

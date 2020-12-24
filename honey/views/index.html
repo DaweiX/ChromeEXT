@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Honey</title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
+ 	</head>
+ 	<body>
+ 		<div id="content">Honey</div>
+
+ 		<div id="signatures_show" style="display: none">
+ 			<p>show signatures:</p>
+			msg_signatures			
+			<div id='msg_signatures'></div>
+			<br/>
+			http_signatures			
+			<div id='http_signatures'></div>
+ 			<button onclick="query_list()">进行匹配</button>
+ 			<div id ="ext_list" style="display:none">
+			<div id="list"></div></div>
+
+		</div>
+
+ 		</div>
+		<div id="block1" name="block1" style="display: none">
+			<p>show msg fingerprint</p>
+			<label name="extension_name">extension_name:</label>
+			<input name ="msg_fin_name" type="text"/>
+			<label name="extension_id">extension_id</label>
+			<input name ="msg_fin_id" type="text"/>
+			<input type="submit" onclick="upload_msg()">
+			<div id = 'msg'></div>
+		</div>
+		<div id="block2" name="block2" style="display: none">
+			<p>show http fingerprint</p>
+			<label name="extension_name">extension_name:</label>
+			<input name ="msg_fin_name_http" type="text"/>
+			<label name="extension_id">extension_id</label>
+			<input name ="msg_fin_id_http" type="text"/>
+			<input type="submit" onclick="upload_http()">
+			<div id="http"></div>
+		</div>
+		<div id = 'http' style="display:none"></div>
+		<button type='button' onclick='checkCookie()'>start scan</button>
+		<button type='button' onclick='showResult()'>end scan</button>
+		<div id = 'analysis'></div>
+
+
+ 	</body>
+</html>
+
+
+<script language="JavaScript">
+
+
+
+
+
+function setCookie(c_name,value,expiredays){
+	var exdate = new Date();
+	exdate.setDate(exdate.getDate() + expiredays)
+	document.cookie=c_name+"="+escape(value)+((expiredays == null)?"":";expires="+exdate.toGMTString())
+}
+
+function getCookie(c_name){
+	if(document.cookie.length>0){
+		c_start=document.cookie.indexOf(c_name+"=")
+		if(c_start!=-1){
+			c_start = c_start+c_name.length+1;
+			c_end = document.cookie.indexOf(";",c_start)
+			if(c_end ==-1) c_end=document.cookie.length
+				return parseInt(unescape(document.cookie.substring(c_start,c_end)))	
+		}
+	}
+	return 0
+}
+
+
+
+
+
+window.onload= function(){
+var sum_count = getCookie('count');
+sum_count = parseInt(sum_count)+1;
+setCookie('count', parseInt(sum_count),365)
+}
+
+
+
+var httplist = [];
+var msglist=[];
+var times = true;
+
+var delet_list=["https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js","https://cdn.bootcss.com/require.js/2.3.6/require.js"];
+var content = document.getElementById("content");
+window.addEventListener('message',function(msg){
+	console.log('---------MSG---------');
+	
+	if(typeof msg.data == 'string'){
+		msglist.push(msg.data);}
+	else{msglist.push(JSON.stringify(msg.data))}
+
+	$("#block1").show();
+	console.log(JSON.stringify(msg.data));
+	var msg_div = document.getElementById("msg");
+
+	msg_div.innerText= JSON.stringify(msg.data);
+	if(times){
+		var msg_count = getCookie('msg_count');
+		msg_count = msg_count +1;
+		setCookie('msg_count',msg_count,365);
+		times = false;
+	}
+	
+
+
+	//setTimeout(search(msglist),200);
+})
+
+var sleep = function(time) {
+    var startTime = new Date().getTime() + parseInt(time, 10);
+    while(new Date().getTime() < startTime) {}
+};
+  	sleep(2000);  
+	setTimeout(function(){
+	var entries =window.performance.getEntriesByType("resource");
+	if (httplist != entries){
+		$("#block2").show();
+		var http = document.getElementById("http");
+		for(var i=0;i<entries.length;i++){
+			httplist.push(entries[i].name)
+		}
+		httplist = array_diff(httplist, delet_list);
+		if(httplist.length>0){
+		console.log('--------http---------');
+		console.log(JSON.stringify(httplist))}
+		http.innerText= JSON.stringify(httplist);
+		if(httplist.length>0){
+			var http_count = getCookie('http_count');
+			http_count = parseInt(http_count)+1;
+			setCookie('http_count', http_count,365);
+		}
+
+	}},4000)
+
+
+
+setTimeout(function(){
+	check_fingerprint(msglist,httplist)
+},10000);
+
+
+
+
+function showResult(){
+	var count = getCookie('count');
+	var msg_count = getCookie('msg_count');
+	var http_count = getCookie('http_count');
+
+	var string = msg_count +" msg extensions have been found!<br/>"
+	var string = string + http_count + "http extensions have been found!"	
+
+	var tag = document.getElementById("analysis");
+	tag.innerHTML = string;
+	setCookie('count',parseInt(0),365)
+	setCookie('msg_count',parseInt(0),365)
+ 	setCookie('http_count',parseInt(0),365)
+}
+
+
+
+function checkCookie(){
+	
+
+	var msg_count = 0;
+	var http_count = 0;
+	var count = 0;
+ 	setCookie('msg_count', parseInt(msg_count),365);
+	setCookie('http_count', parseInt(http_count),365);
+	setCookie('count', parseInt(count),365);
+}
+
+
+
+function check_fingerprint(msglist,httplist) {
+	$("#signatures_show").show();
+	var msg_sig = document.getElementById('msg_signatures');
+	var http_sig = document.getElementById('http_signatures');
+	//setTimeout(function(){
+	msg_sig.innerText = JSON.stringify(msglist);
+	http_sig.innerText = JSON.stringify(httplist);}
+
+//},10000)
+
+
+function query_list(){
+	
+	var msg_sig = document.getElementById('msg_signatures').innerText;
+	var http_sig = document.getElementById('http_signatures').innerText;
+	query_msg('msg',msg_sig);
+	query_msg('http',http_sig);
+	//document.getElementById("ext_form").innerHTML=content;
+}
+
+function unique2(arr) {
+            var formArr = arr.sort()
+            var newArr=[formArr[0]]
+            for (let i = 1; i < formArr.length; i++) {
+                if (formArr[i]!==formArr[i-1]) {
+                    newArr.push(formArr[i])
+                }
+            }
+            return newArr}
+
+function query_msg(type , list){
+	if(type == 'msg'){
+		$.ajax({
+		url:'/query',
+		type:'post',
+		data:JSON.stringify(list),
+		dataType:'text',
+		success:function(data,status){
+			if(status == 'success'){
+				//alert('ok!');
+				$("#ext_list").show();
+				var ext_form = document.getElementById('list');
+				ext_form.innerText =data;
+			}
+		},
+		error:function(data,status){
+			if(status == 'error'){ 
+				//alert('fail')
+			}
+		}
+
+})}	
+	if(type == 'http'){
+		var temp_data = encodeURIComponent(list)
+		$.ajax({
+		url:'/query_http',
+		type:'post',
+		data:temp_data,
+		dataType:'text',
+		success:function(data,status){
+			if(status == 'success'){
+				console.log('success')
+			}
+		},
+		error:function(data,status){
+			if(status == 'error'){ 
+				console.log('fail')
+			}
+		}
+
+})
+		}
+
+	}
+
+
+function upload_msg(){
+	var msg_name = JSON.stringify($("input[name='msg_fin_name']").val());
+	var msg_id = JSON.stringify($("input[name='msg_fin_id']").val());
+	var msg = document.getElementById("msg");
+
+
+	var fingerprint = msg.innerText;
+
+	var data ={'name':msg_name, 'id':msg_id, 'table_name':'msg','fingerprint':fingerprint}
+	$.ajax({
+		url:'/add',
+		type:'post',
+		data:data,
+		success:function(data,status){
+			if(status == 'success'){
+				//alert('ok!')
+			}
+		},
+		error:function(data,status){
+			if(status == 'error'){ 
+				//alert('fail')
+			}
+		}
+
+
+	})
+
+}
+
+function upload_http(){
+	var msg_name = JSON.stringify($("input[name='msg_fin_name_http']").val());
+	var msg_id = JSON.stringify($("input[name='msg_fin_id_http']").val());
+	var http = document.getElementById("http");
+	var fingerprint = http.innerText;
+	var data ={'name':msg_name, 'id':msg_id, 'table_name':'http','fingerprint':fingerprint}
+	$.ajax({
+		url:'/add',
+		type:'post',
+		data:data,
+		success:function(data,status){
+			if(status == 'success'){
+				//alert('ok!')
+			}
+		},
+		error:function(data,status){
+			if(status == 'error'){ 
+				//alert('fail')
+			}
+		}
+
+
+	})
+
+}
+function array_diff(a, b) {
+			for (var i = 0; i < b.length; i++) {
+				for (var j = 0; j < a.length; j++) {
+					if (a[j] == b[i]) {
+						a.splice(j, 1);
+						j = j - 1;
+					}
+				}
+			}
+			return a;}
+
+
+</script>
+
+
+

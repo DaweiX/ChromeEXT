@@ -1,0 +1,145 @@
+body {
+	width: 960px;
+	margin: 0 auto 32px auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
+
+h3, h4, h5, h6 {
+	font-size: 110%;
+}
+
+h1, h2, h3 {
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+h2 {
+	margin-left: 1em;
+	margin-bottom: 0.2em;
+}
+
+h3 {
+	margin: 0 0 0 2.15em;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0.2em 0 1.2em 2.4em;
+	padding: 0;
+}
+
+ul li {
+	padding: 0.2em 0 0.2em 0;
+}
+
+.option-page h1 img {
+	margin-bottom: -7px;
+	width: 48px;
+	height: 48px;
+}
+
+.option-page small#version {
+	padding-top: 4px;
+	float: right;
+	font-family: Arial;
+}
+
+
+.level2,
+.help {
+	color: #333;
+	font-size: 90%;
+	padding-left: 0px;
+}
+
+.help code {
+	display: inline-block;
+	border: 1px solid #333;
+	border-radius: 4px;
+	padding: 1px 4px 2px 4px;
+	margin-bottom: 12px;
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	box-shadow: 1px 1px #333;
+	min-width: 14px;
+	text-align: center;
+	line-height: 14px;
+}
+
+.extra0 {
+	display: inline-block;
+	width: 30px;
+	height: 22px;
+}
+
+.extra1 {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+}
+
+.extra2 {
+	display: inline-block;
+	width: 100px;
+	height: 22px;
+}
+
+input {
+	margin: 0px 4px 0px 0px;
+	padding: 0;
+}
+
+input[type=text] {
+	margin-left: 4px;
+	width: 50px;
+}
+
+textarea {
+	width: 450px;
+	min-height: 150px;
+}
+
+.footer {
+	padding-top: 100px;
+	clear: both;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: #aaa;
+}
+
+#buttons {
+	min-height: 50px;
+	min-width: 100px;
+}
+
+#buttons button {
+	margin-left: 2em;
+	margin-top: 14px;
+}
+
+#status {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 960px;
+	height: 20px;
+	color: green;
+	font-weight: bold;
+	z-index: 1;
+	background-color: #ccc;
+	display: none;
+}
+
+div.beta {
+	display: inline-block;
+	font-size: 50%;
+	vertical-align: top; position: relative; top: -0.3em;
+	color: #700;
+}

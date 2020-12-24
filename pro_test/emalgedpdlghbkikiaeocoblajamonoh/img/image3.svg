@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="119px" height="120px" viewBox="0 0 119 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Option#3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Amanda-(Onboarding#3)" transform="translate(-1186.000000, -235.000000)">
+            <g id="panel" filter="url(#filter-1)" transform="translate(1030.000000, 40.000000)">
+                <g id="assets" transform="translate(80.000000, 200.000000)">
+                    <g id="icon" transform="translate(86.000000, 0.000000)">
+                        <polygon id="Shape" stroke="#E0E2E5" stroke-width="2" stroke-linecap="round" points="87.3575342 44.3465753 65.9726027 44.3465753 76.6671233 66.1342466 87.3575342 66.1342466 98.8575342 66.1342466"></polygon>
+                        <polygon id="Shape" stroke="#E0E2E5" stroke-width="2" stroke-linecap="round" points="65.9726027 44.3465753 11.2986301 44.3465753 0 66.1342466 11.2986301 66.1342466 55.2356164 66.1342466"></polygon>
+                        <polygon id="Shape" stroke="#E0E2E5" stroke-width="2" stroke-linecap="round" points="55.2356164 66.1342466 11.2986301 66.1342466 11.2986301 98.4150685 65.9726027 98.4150685 65.9726027 44.3465753"></polygon>
+                        <polygon id="Shape" stroke="#E0E2E5" stroke-width="2" stroke-linecap="round" points="65.9726027 44.3465753 65.9726027 98.4150685 87.3575342 98.4150685 87.3575342 66.1342466 76.6671233 66.1342466"></polygon>
+                        <path d="M17.8082192,85.5164384 L32.9863014,85.5164384" id="Shape" stroke="#E0E2E5" stroke-width="2"></path>
+                        <path d="M17.8082192,91.7945205 L43.1506849,91.7945205" id="Shape" stroke="#E0E2E5" stroke-width="2"></path>
+                        <path d="M50.6013699,41.360274 L50.6013699,35.0945205 C54.9657534,33.139726 58.0054795,28.7643836 58.0054795,23.6739726 C58.0054795,16.7657534 52.4041096,11.1630137 45.4958904,11.1630137 C38.5863014,11.1630137 32.9863014,16.7657534 32.9863014,23.6739726 C32.9863014,28.7643836 36.0260274,33.139726 40.3890411,35.0945205 L40.3890411,41.360274" id="Shape" stroke="#5266C4" stroke-width="1.8"></path>
+                        <path d="M45.4972603,41.360274 L45.4972603,26.2630137" id="Shape" stroke="#5266C4" stroke-width="1.8"></path>
+                        <circle id="Oval" stroke="#5266C4" stroke-width="1.8" cx="45.4972603" cy="23.2246575" r="3.0369863"></circle>
+                        <path d="M45.4972603,0.184931507 L45.4972603,6.34931507" id="Shape" stroke="#5266C4" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M63.0136986,23.2260274 L70.2054795,23.2260274" id="Shape" stroke="#5266C4" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M19.8630137,23.2260274 L27.0547945,23.2260274" id="Shape" stroke="#5266C4" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M27.0547945,6.34931507 L32.139726,11.4356164" id="Shape" stroke="#5266C4" stroke-width="1.8" stroke-linecap="round"></path>
+                        <path d="M63.0931507,6.35068493 L58.0068493,11.4356164" id="Shape" stroke="#5266C4" stroke-width="1.8" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

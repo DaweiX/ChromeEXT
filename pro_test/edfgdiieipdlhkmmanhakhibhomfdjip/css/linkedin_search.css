@@ -1,0 +1,303 @@
+/* Prospector Box */
+
+#prospector-box {
+  position: fixed;
+  width: 300px;
+  top: 80px;
+  right: 0;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #aaa;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+  box-sizing: border-box;
+
+  bottom: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  font-family: sans-serif;
+}
+
+#prospector-box .salesloft-logo {
+  display: block;
+  height: 30px;
+  width: 132px;
+  background: transparent url("http://clodura.com/prospector/linkedin.logo.png") no-repeat top left;
+  background-size: 132px 30px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+}
+
+#prospector-box #hide-prospector-box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+}
+
+#prospector-box .prospector-list {
+  margin: 10px 0 0;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* Box Toggle Button */
+
+#prospector-box-toggle {
+  display: none;
+  position: fixed;
+  top: -1px;
+  right: 20px;
+  padding: 5px 10px;
+  background-color: white;
+  font-size: 14px;
+  border: 1px solid #666;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+
+  font-family: sans-serif;
+}
+
+#prospector-box-toggle.show {
+  display: block;
+  opacity: 1;
+}
+
+#prospector-box-toggle a {
+  color: #08c;
+  font-weight: normal;
+}
+
+#prospector-box-toggle a:hover {
+  text-decoration: none;
+}
+
+/* Search Results */
+
+#prospector-results .prospector-result {
+  margin: 10px 0 0;
+  padding: 10px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+#prospector-results .prospector-result img {
+  float: left;
+  width: 30px;
+  margin-right: 10px;
+}
+
+#prospector-results .prospector-result-name {
+  display: block;
+  font-size: 15px;
+}
+
+#prospector-results .prospector-result-headline {
+  display: block;
+  max-width: 195px;
+  color: #999;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 1em;
+}
+
+#prospector-results .prospector-result .prospector-search-add {
+  float: right;
+  margin: 3px 5px 0;
+}
+
+#prospector-results .prospector-result .prospector-search-add a {
+  display: inline-block;
+  padding: 0 7px;
+  background-image: -webkit-linear-gradient(bottom, #2d90e9 0%, #1d7ae3 18%, #5cb7f2 100%);
+  color: #fff !important;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 22px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  vertical-align: top;
+  border: 1px solid #226dad;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.33), 0 1px 1px 0 rgba(0, 41, 117, 0.33);
+}
+
+#prospector-results .prospector-result .prospector-search-add a:hover {
+  background-image: -webkit-linear-gradient(bottom, #207be2 0%, #186dde 18%, #50adf0 100%);
+  text-decoration: none;
+}
+
+#prospector-results .prospector-result .prospector-search-add a:active {
+  background-image: -webkit-linear-gradient(bottom, #1d7ae2 0%, #196fd0 100%);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#prospector-results .prospector-result .prospector-search-loading {
+  background-image: none !important;
+  background-color: #ccc !important;
+  border-color: #aaa !important;
+}
+
+#prospector-results .prospector-result .prospector-search-added {
+  color: #1e8120;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+#prospector-results .prospector-existing {
+  margin-top: 5px;
+  color: #c66;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Bottom Buttons */
+
+#prospector-box .add-to-prospector,
+#prospector-modal .add-to-prospector {
+  display: block;
+  position: relative;
+  margin: 10px 0 0;
+  padding: 0 6px;
+  background-image: -webkit-linear-gradient(bottom, #2d90e9 0%, #1d7ae3 18%, #5cb7f2 100%);
+  color: #fff !important;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  vertical-align: top;
+  border: 1px solid #226dad;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.33), 0 1px 1px 0 rgba(0, 41, 117, 0.33);
+}
+
+#prospector-box .add-to-prospector:hover,
+#prospector-modal .add-to-prospector:hover {
+  background-image: -webkit-linear-gradient(bottom, #207be2 0%, #186dde 18%, #50adf0 100%);
+  text-decoration: none;
+}
+
+#prospector-box .add-to-prospector:active,
+#prospector-modal .add-to-prospector:active {
+  background-image: -webkit-linear-gradient(bottom, #1d7ae2 0%, #196fd0 100%);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#prospector-box .add-to-prospector.loading {
+  background: #eaeaea !important;
+  color: #a8a8a8 !important;
+  text-shadow: none;
+  border: 1px solid #c7c7c7;
+  box-shadow: none;
+  cursor: default;
+}
+
+#prospector-box .prospector-added {
+  margin: 10px 0 0;
+  color: #1e8120;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 26px;
+}
+
+/* Modals */
+
+#prospector-modal-bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-radial-gradient(50% 50%, ellipse closest-corner, rgba(0,0,0,0.25) 1%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 100000;
+}
+
+#prospector-modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 350px;
+  margin-left: -175px;
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  opacity: 0;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-name: zoom-out;
+}
+
+#prospector-modal.in {
+  opacity: 1;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-name: zoom-in;
+}
+
+#prospector-modal h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#prospector-modal p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#prospector-modal .add-to-prospector {
+  float: none;
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+#prospector-modal-close {
+  float: right;
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  background-image: -webkit-linear-gradient(bottom, #e4e4e4 0%, #f7f7f7 100%);
+  color: #666;
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,1), 0px 1px 1px 0px rgba(0,0,0,0.25);
+}
+
+@-webkit-keyframes zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes zoom-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.98);
+  }
+}

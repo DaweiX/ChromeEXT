@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/main.css" rel="stylesheet" />
+    <link href="../css/loading.css" rel="stylesheet" />
+
+    
+  </head>
+  <body>
+    <input type="text" id="searchTxt" autofocus placeholder="Keyword + Enter or type `:`" class="searchTxt" @keydown="keyChange()" @keyup.13="searchGo()" @keydown.40="moveDown()"  v-model="keyword">
+    
+    <svg class="txt-flag" v-show="action == 'command'">
+      <use xlink:href="/css/icon.svg#command"></use>
+    </svg>
+
+    <svg class="txt-flag" v-show="action == 'search'">
+      <use xlink:href="/css/icon.svg#enter"></use>
+    </svg>
+
+    <div class="list-wraper" @keydown.40="moveDown()"  @keydown.38="moveUp()"  tabindex="1"  @keydown.13="visit()">
+      <div v-show="isListRepos && !isring && repos[0].items[0]">
+        <div v-for="group in repos">
+          <div class="subtyp" v-show="repos.length > 1">{{group.items[0].rootyp_zh}} - {{group.items[0].typcd_zh}}</div>
+          <a href="https://www.awesomes.cn/{{item.link_url}}" target="_blank"  v-for="item in group.items" :key="item.id">
+            <div class="repo-item active-{{checkeditem == $index + 1 && repos.length == 1}}" @mouseover="moveTo($index + 1, true)">
+              <div class="innner">
+                <img class="cover" src="{{item.cover_path}}?x-oss-process=style/repo-50" />
+                <span class="fresh {{item.fresh[0]}}" title="{{item.fresh[1]}}" v-show="view == 'repos'"></span>
+                <i class="rank" v-show="view == 'tops'">{{$index + 1}}</i>
+                
+                <h3>{{item.name}}</h3> 
+                
+                <div class="desc">{{i18ngo(item.description_cn, item.description)}}</div>
+                
+              </div>
+
+              <ul class="repo-extra">
+                <li  title="{{i18('repoTrend')}}">
+                  <svg class="icon">
+                      <use xlink:href="/css/icon.svg#rank-{{item.trend}}"></use>
+                  </svg>
+                  <span class="category">{{i18ngo(item.typcd_zh, item.typcd)}}</span>
+                </li>
+                <li  title="{{i18('repoUsing')}}">
+                    <svg class="icon icon-flip-horizontal" >
+                        <use xlink:href="/css/icon.svg#hand-lizard-o"></use>
+                    </svg>
+                    <span>{{item.using}} </span>
+                  </li>  
+                <li  title="{{i18('repoIssue')}}">
+                    <svg class="icon">
+                        <use xlink:href="/css/icon.svg#issue"></use>
+                    </svg>
+                    <span>{{item.issue_friendly}} </span>
+                  </li>
+                <li  title="{{i18('repoStar')}}">
+                    <svg class="icon">
+                        <use xlink:href="/css/icon.svg#favor"></use>
+                    </svg>
+                    <span>{{item.stargazers_count}} </span>
+                  </li>
+                </ul>
+            </div>
+          </a> 
+        </div>
+      </div>
+
+      <div class="no-items" v-show="isListRepos && !isring && !repos[0].items[0]">{{i18("searchNotfind")}}</div> 
+
+      <! --加载动画 -->
+      <div class="loading loading-list" v-show="isring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <! --专题列表 -->
+      <div class="subject" v-show="view == 'subject'">
+        <a class="sub-item" v-for="item in subs" href="http://www.awesomes.cn/subject/{{item.key}}" target="_blank">
+          <img src="{{item.cover_path}}?x-oss-process=style/app_subject" class="cover">
+          <h3 class="sub-key">{{item.key}}</h3>
+        </a>
+      </div>
+
+      <! --添加repo -->
+      <div v-show="view == 'add'" class="add-wraper">
+        <div  v-show="current_url && addstatus != 'success'">
+          <div class="add-left">
+            <template  v-for="item in categorys">
+              <div class="typ-head" > {{i18ngo(item.items[0].rootyp_zh, item.items[0].rootyp)}} </div>
+              <div class="typ-item checked-{{checkedtyp == typ.id}}" v-for="typ in item.items" @click="checkTyp(typ)">
+              <svg class="icon check-ico">
+                  <use xlink:href="/css/icon.svg#arrow"></use>
+                </svg>
+                {{i18ngo(typ.typcd_zh, typ.typcd)}}
+              </div>
+            </template>
+          </div>
+          <div class="add-right">
+            <div>
+              <button type="button" @click="addNewRepo()" v-show="current_url && addstatus == 'ready'">{{i18("subTxt")}}</button>
+            </div>
+          </div>
+        </div>
+        
+        <div v-show="!current_url && addstatus != 'success'"  class="notvalid-url">
+          <svg>
+            <use xlink:href="/css/icon.svg#ban"></use>
+          </svg>
+          <p>{{i18('subError1')}}</p> 
+          <p>{{i18('subError2')}}</p> 
+        </div>
+
+        <div v-show="addstatus == 'success'" class="submit-success">
+          <svg>
+            <use xlink:href="/css/icon.svg#success"></use>
+          </svg>
+          <p>{{i18("subSuccess")}}</p>
+        </div>
+        
+      </div>
+
+      
+
+      <! --命令说明 -->
+      <div v-show="view == 'help'" class="help-wraper">
+          <svg>
+            <use xlink:href="/css/icon.svg#command"></use>
+          </svg>
+          <div class="inner">
+            <h3>{{i18('helpTitle')}}</h3>
+            <ul>
+              <li><kbd>:+</kbd> <p>{{i18('helpSub')}}</P></li>
+              <li>
+                <kbd>:top</kbd> <p>{{i18('helpTop')}}</P>
+                
+              </li>
+
+              <li>
+                <kbd>:s</kbd> <p>{{i18('helpSubject')}}</P> 
+                <ul>
+                  <li>
+                    <kbd>:s[:{{i18('helpSubName')}}]</kbd> <p>{{i18('helpSubRepos')}}</P> 
+                  </li>
+                </ul>
+              </li>
+              
+              
+              
+            </ul>
+          </div>
+          
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/store.min.js"></script>
+    <script src="../js/popup.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

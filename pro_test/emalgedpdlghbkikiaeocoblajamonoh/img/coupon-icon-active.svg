@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="32px" viewBox="0 0 36 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>coupon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Option#3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Coupon" transform="translate(-1227.000000, -644.000000)" fill="#000000">
+            <g id="panel" filter="url(#filter-1)" transform="translate(1030.000000, 40.000000)">
+                <g id="bottom_bar" transform="translate(40.000000, 596.000000)">
+                    <g id="item#3" transform="translate(140.000000, 1.000000)">
+                        <g id="coupon" transform="translate(27.000000, 12.000000)">
+                            <path d="M15.3333333,4.66666667 C15.7013333,4.66666667 16,4.368 16,4 L16,0.666666667 C16,0.298666667 15.7013333,0 15.3333333,0 L0.666666667,0 C0.298666667,0 0,0.298666667 0,0.666666667 L0,4 C0,4.368 0.298666667,4.66666667 0.666666667,4.66666667 C1.42666667,4.66666667 2,5.24 2,6 C2,6.76 1.42666667,7.33333333 0.666666667,7.33333333 C0.298666667,7.33333333 0,7.632 0,8 L0,11.3333333 C0,11.7013333 0.298666667,12 0.666666667,12 L15.3333333,12 C15.7013333,12 16,11.7013333 16,11.3333333 L16,8 C16,7.632 15.7013333,7.33333333 15.3333333,7.33333333 C14.5733333,7.33333333 14,6.76 14,6 C14,5.24 14.5733333,4.66666667 15.3333333,4.66666667 Z M5.66666667,2.66666667 C6.21866667,2.66666667 6.66666667,3.11466667 6.66666667,3.66666667 C6.66666667,4.21866667 6.21866667,4.66666667 5.66666667,4.66666667 C5.11466667,4.66666667 4.66666667,4.21866667 4.66666667,3.66666667 C4.66666667,3.11466667 5.11466667,2.66666667 5.66666667,2.66666667 Z M10.3333333,9.33333333 C9.78133333,9.33333333 9.33333333,8.88533333 9.33333333,8.33333333 C9.33333333,7.78133333 9.78133333,7.33333333 10.3333333,7.33333333 C10.8853333,7.33333333 11.3333333,7.78133333 11.3333333,8.33333333 C11.3333333,8.88533333 10.8853333,9.33333333 10.3333333,9.33333333 Z M5.33333333,9.60933333 L4.39066667,8.66666667 L10.6666667,2.39066667 L11.6093333,3.33333333 L5.33333333,9.60933333 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

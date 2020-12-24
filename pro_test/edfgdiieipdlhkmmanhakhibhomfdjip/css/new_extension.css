@@ -1,0 +1,586 @@
+
+/* left panel css classes starts */
+
+.clodura-leftpanel {
+    right: 0;
+    left: auto;
+    background-image: none !important;
+    display: block !important;
+    visibility: hidden ;
+    position: fixed;
+    top: 0;
+    width: 35% !important;
+    /*max-width: 32% !important;*/
+    /*min-width: 32% !important;*/
+    height: 100vh !important;
+    background-color: white;
+    z-index: 2147483001;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+    transition: visibility 0.8s ease-in-out;
+    clip: unset !important;
+}
+
+.clodura-MainContainer{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.clodura-rightHead{
+    overflow:hidden;
+    padding-left: 14%;
+    max-width:100%;
+    height: 100%;
+}
+
+.clodura-leftNav{
+    float: left;
+    position: fixed;
+    max-height: 100%;
+    height: 100%;
+    z-index: 1000;
+    width:14%;
+    /*background-image: linear-gradient(120deg, #03A9F4 20%, #6b63eb 100%);*/
+    background-image: linear-gradient(120deg, #0a558c 20%, #6b63eb );
+}
+
+.clodura-leftNav ul{
+    margin-top: 17px;
+}
+
+/* left panel css classes end */
+
+.company-header{
+    display: inline;
+    height: 10%;
+    line-height: 50px;
+    color: #616161;
+}
+.clodura-circlearancione {
+    padding: 1% 0 0% 10%;
+    display: flex;
+    align-items: center;
+}
+.clodura-company-header > div:before {
+    content: '';
+    margin-right: 5%;
+    /*border: 1px solid #ddd;*/
+    /*border-radius: 50%;*/
+    height: 38px;
+    width: 44px;
+    background: url('../img/company-1.png') no-repeat;
+    background-size: 47px 47px;
+    background-position: center;
+    margin-bottom: 3%;
+}
+.clodura-name-header{
+    line-height: 1.5;
+    width: 94px;
+    background: /* gradient can be an image */
+            linear-gradient(to left, #03A9F4, #6b63eb)
+            left
+            bottom
+            #FFF
+            no-repeat;
+    background-size:100% 2px;
+}
+.add_divider{
+    position: absolute;
+    /*bottom: 0;*/
+    left: 0;
+    right: 0;
+    border-top: 0.9px solid #D0D0D0;
+    /*margin-top:5px;*/
+}
+
+/* search box css classes starts */
+
+.clodura-search-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    width: 84%;
+}
+.clodura-search-box,.close-icon{
+    position: relative;
+    padding: 7px;
+}
+.clodura-search-box {
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 8px;
+    height: 32px;
+    width: 95%;
+}
+.clodura-search-box:focus {
+    box-shadow: 0 0 0 1px #b0e0ee;
+    border: 1px solid #bebede;
+}
+.clodura-close-icon {
+    border: 1px solid transparent;
+    background-color: transparent;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 33%;
+    right: 8%;
+}
+.clodura-close-icon:after {
+    content: "x";
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background-color: #FA9595;
+    z-index: 1;
+    right: -1px;
+    top: 5px;
+    bottom: 0;
+    margin: auto;
+    padding: 1px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 10px;
+    /* box-shadow: 0 0 2px #E50F0F; */
+    cursor: pointer;
+}
+.clodura-search-box:valid ~ .clodura-search-icon{
+    display: none;
+}
+.clodura-search-box:not(:valid) ~ .clodura-search-icon {
+    position: absolute;
+    top: 28%;
+    right: 8%;
+}
+.clodura-search-box:not(:valid) ~ .clodura-close-icon {
+    display: none;
+}
+
+/* search box css classes end */
+
+.clodura-info{
+    font-size: 13px;
+}
+.clodura-person-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 25px;
+}
+
+.clodura-circle-icon {
+    border: 1px solid #ddd !important;
+    border-radius: 50% !important;
+    height: 40px !important;
+    width: 41px !important;
+}
+
+.clodura-circle-icon:disabled{
+    pointer-events: none;
+}
+
+.clodura-dashboardIcon{
+    background: url('https://product.clodura.ai/client/app/assets/images/dashboard-inactive.png');
+    height:18px;
+    width: 18px;
+}
+
+.clodura-credits-container {
+    position: sticky;
+    max-height: 50px;
+    background-color: white;
+    box-shadow: 0 -5px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 50px;
+    z-index: 1;
+}
+
+.clodura-line-break{
+    height: 10%;
+    line-height: 20px;
+    color: #616161;
+}
+.clodura-data-container{
+    padding: 7.5% 0 0 7%;
+    min-height: 60%;
+}
+
+.clodura-type-header{
+    font-size:13px;
+    color:#444343;
+    font-weight: 600;
+    line-height: 1.7;
+    display: inline-block;
+    background: /* gradient can be an image */
+            linear-gradient(to left, #03A9F4, #6b63eb)
+            left
+            bottom
+            #FFF
+            no-repeat;
+    background-size:84% 0px;
+}
+.clodura-gradient-text{
+    background: -webkit-linear-gradient(#03A9F4, #6b63eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.clodura-li_active {
+    border-left: 5px solid white;
+    color: #FFF;
+    /*background-color: ;*/
+    font-weight: 600;
+    /*transform: translateY(4px);*/
+    /*margin-left:12px;*/
+}
+
+ /* scroll css classes starts */
+
+.clodura-scrollbar
+{
+    height: 81%;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    margin-right: 7px;
+}
+
+.clodura-scrollbar::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.clodura-scrollbar::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+.clodura-scrollbar::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(122,153,217)),
+    color-stop(0.72, rgb(73,125,189)),
+    color-stop(0.86, rgb(28,58,148)));
+}
+
+.clodura-blur {
+    text-shadow: 0 0 15px #212529;
+    color: transparent;
+    user-select: none;
+}
+
+.clodura-outer {
+    position: relative;
+    /*background: url('../img/cloduraicon3838.png');*/
+    top:5px;
+    width: 100%;
+    /*opacity: 0.1;*/
+    /*filter: alpha(opacity=10);*/
+    /*height: 309px;*/
+}
+.clodura-inner{
+    position: absolute;
+    top: 0px;
+    /*left: 0;*/
+    width: 100%;
+}
+
+.clodura-hr-line
+{
+    padding-top: 10px;
+    border-bottom: 1px solid white;
+}
+.hover_class:hover {
+    background-color: #1281d2;
+}
+
+#clodura_prosp:active {
+    vertical-align: top;
+    padding: 4px 3px 3px;
+}
+#button:active {
+    vertical-align: top;
+    padding: 4px 3px 3px;
+}
+#clodura_collapse:active{
+    vertical-align: top;
+    padding: 4px 3px 3px;
+}
+#clodura_logout:active{
+    vertical-align: top;
+    padding: 4px 3px 3px;
+}
+#clodura_settings:active{
+    vertical-align: top;
+    padding: 4px 3px 3px;
+}
+#addtoradar:active{
+    vertical-align: top;
+    padding: 4px 1px 3px;
+}
+.settings_style{
+    color:white;
+    padding-top:12px;
+    font-size:17px !important;
+}
+/*#backkey:hover{*/
+/*    color: white;*/
+/*}*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 17px;
+    margin-top: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*.slider {*/
+/*    position: absolute;*/
+/*    cursor: pointer;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    background-color: #ccc;*/
+/*    -webkit-transition: .4s;*/
+/*    transition: .4s;*/
+/*}*/
+
+/*.slider:before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    height: 10px;*/
+/*    width: 10px;*/
+/*    left: -9px;*/
+/*    right: 0px;*/
+/*    bottom: 4px;*/
+/*    margin-left: 9px;*/
+/*    background-color: white;*/
+/*    -webkit-transition: .4s;*/
+/*    transition: .4s;*/
+/*}*/
+
+input:checked + .slider {
+    background-color: #009fda;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* Styled checkbox css classes */
+
+.clodura-CustomecheckBox{position: relative;min-width: 17px;}
+.clodura-styled-checkbox { position: absolute; opacity: 0;}
+.clodura-styled-checkbox + label { position: relative; cursor: pointer; padding: 0;width: 17px; height: 17px;}
+.clodura-styled-checkbox + label:before { background: #fff; content: ''; position: absolute; border-radius: 2px; display: inline-block; vertical-align: text-top; left: 0; width: 15px; height: 15px; border: 1px solid #878da1;}
+.clodura-styled-checkbox:hover + label:before { background-color: #878da1;}
+.clodura-styled-checkbox:focus + label:before { box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2);}
+.clodura-styled-checkbox:checked + label:before { background: #878da1;}
+.clodura-styled-checkbox:disabled + label { color: #b8b8b8; cursor: auto;}
+.clodura-styled-checkbox:disabled + label:before { box-shadow: none; background: #878da1;}
+.clodura-styled-checkbox:checked + label:before { background: url(https://product.clodura.ai/client/app/assets/images/checkbox-right.png) no-repeat center #878da1;}
+
+/*table, th, td {*/
+/*    border: 1px solid grey;*/
+/*}*/
+
+.table{
+    margin-bottom: 2em;
+}
+
+.clodura-blueOutlinedBtn {
+    padding: 5px 17px;
+    line-height: 20px;
+    background: #fff;
+    font-size: 13px;
+    border: 1px solid #59cafd;
+    color: #354052;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.clodura-blueOutlinedBtn:active:focus,
+.clodura-blueOutlinedBtn:active:hover, .clodura-blueOutlinedBtn:hover {
+    color: #fff !important;
+    background-color: rgb(10, 119, 175);
+    box-shadow: none !important;
+}
+
+.clodura-blueOutlinedBtn:focus{
+    box-shadow: none !important;
+}
+
+/* icon notification check and cross animated icons */
+
+.clodura-icon-notification{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    /*background-color: yellow;*/
+    /*background-color: #1a3448;*/
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+    z-index: 1000;
+    right: auto;
+    display: block;
+}
+.applystyle{
+    border-bottom: 1px solid #e0d9d9;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+.clodura-thead-dark {
+    background-color: white;
+    color: #504e4e !important;
+    border-color: initial !important;
+}
+
+.clodura-checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.clodura-checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 6;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    /*margin: 10% auto;*/
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.clodura-checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}
+
+.clodura-crossmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #D06079;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.clodura-crossmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 6;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    /*margin: 10% auto;*/
+    box-shadow: inset 0px 0px 0px #D06079;
+    animation: crossfill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.clodura-crossmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes crossfill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #D06079;
+    }
+}
+
+.clodura-loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid rgb(10, 119, 175);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    display: block;
+    top: 40%;
+    left: 42%;
+    position: relative;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.clodura-loading {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: url('../img/loader.png');
+    z-index: 9999;
+}
+#clodura_footer {
+    position:absolute;
+    width:100%;
+    bottom:0;
+    height:42px;
+    background-color:white;
+    z-index:8888;
+    border-top:1px solid #ddd;
+}

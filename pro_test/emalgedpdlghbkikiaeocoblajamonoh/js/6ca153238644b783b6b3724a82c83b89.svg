@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="38px" viewBox="0 0 12 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>save</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M166,19.7534881 L166,0 L0,0 L0,60 L166,60 L166,40.0452619 C166.634006,36.3188261 168.169937,35.0981244 171.600625,33.399375 C176.665625,30.891375 176.665625,28.907375 171.600625,26.399375 C168.169937,24.7006256 166.634006,23.4799239 166,19.7534881 Z" id="path-1"></path>        
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="175.399375" height="60" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Option#3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Shoptagr-Button-State#3" transform="translate(-958.000000, -105.000000)">
+            <g id="save" transform="translate(793.000000, 95.000000)">
+                <g id="dropdown">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke-opacity="0.2" stroke="#000000" mask="url(#mask-3)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

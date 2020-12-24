@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
+    <g id="Final-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Cash-Back-(Wallet-Page)-(Menu-Open)-(Tablet)" transform="translate(-573.000000, -608.000000)" stroke="#F9639C">
+            <g id="transactions" transform="translate(300.000000, 90.000000)">
+                <g id="items" transform="translate(0.000000, 126.000000)">
+                    <g id="item" transform="translate(0.000000, 348.000000)">
+                        <g id="status" transform="translate(274.000000, 45.000000)">
+                            <g id="cancelled">
+                                <circle id="Oval" cx="6" cy="6" r="5.625"/>
+                                <line x1="2.02275" y1="9.97725" x2="9.97725" y2="2.02275" id="Path"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

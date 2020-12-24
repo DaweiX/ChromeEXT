@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Supported Stores</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Option#3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Supported-Stores" transform="translate(-1387.000000, -305.000000)">
+            <g id="panel" filter="url(#filter-1)" transform="translate(1030.000000, 40.000000)">
+                <rect id="base" fill="#FFFFFF" x="40" y="0" width="350" height="652"></rect>
+                <g id="favorite_stores" transform="translate(60.000000, 90.000000)" fill="#F6A623">
+                    <g id="item#3" transform="translate(0.000000, 162.000000)">
+                        <g id="favorite_on" transform="translate(298.000000, 14.000000)">
+                            <path d="M11.3574135,3.7873457 L8.12070565,3.31713813 L6.67258634,0.384152831 C6.41910921,-0.128050944 5.58068488,-0.128050944 5.32720775,0.384152831 L3.87983838,3.31713813 L0.642380551,3.7873457 C0.0296858458,3.87658765 -0.218541752,4.63251942 0.226918046,5.06748017 L2.56970661,7.35027415 L2.01700649,10.5742332 C1.9127659,11.1846781 2.55470797,11.6533858 3.10515829,11.3646619 L5.99989705,9.84304918 L8.89538573,11.3654118 C9.44133646,11.651136 10.0885281,11.1899276 9.98353753,10.5749831 L9.43083741,7.35102408 L11.773626,5.0682301 C12.2183358,4.63251942 11.9701082,3.87658765 11.3574135,3.7873457 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

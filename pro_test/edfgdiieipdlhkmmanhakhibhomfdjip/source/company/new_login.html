@@ -1,0 +1,54 @@
+<!--<link rel="stylesheet" type="text/css" href="../../css/smartadmin-production.min.css">-->
+<style>
+    html, body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        height: 100% !important;
+    }
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+        color: #333;
+        background-color: #ebebeb;
+        border-color: #adadad;
+    }
+</style>
+<div style="height: 100%;" ng-controller="ExtLoginCtrl">
+    <div>
+        <div style="text-align:center;padding:56px 20px 0px 25px;">
+            <img style="width:200px;height: 35px;" src="https://product.clodura.ai/client/app/assets/images/clodura-ai.png">
+        </div>
+    </div>
+    <form name="form" id="form" class="smart-form client-form" style="margin-top: 20px;">
+        <fieldset style="padding-top: 60px;">
+            <section style="padding: unset;">
+                <label class="input" style="padding-bottom:5px;">
+                    <i class="icon-append fa fa-user" style="margin-right: 8%;"></i>
+                    <input type="email" name="email" id="clodurausername" placeholder="Email address" required="" ng-model="cloduraEmail" style="width: 80%;margin-left: 12%;">
+                    <b class="tooltip tooltip-top-right" style="margin-right: 8%;"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b>
+                </label>
+            </section>
+            <section>
+                <label class="input" style="padding-bottom:5px;">
+                    <i class="icon-append fa fa-lock" style="margin-right: 8%;"></i>
+                    <input type="password" name="password" id="clodurapassword" placeholder="Password" style="width: 80%;margin-left: 12%;" ng-model="cloduraPassword" required>
+                    <b class="tooltip tooltip-top-right" style="margin-right: 8%;"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
+                </label>
+                <div class="note" style="text-align: center;margin-left: 3%;"><a href="https://product.clodura.ai/#!/forgot_password" target="_blank">Forgot password?</a></div>
+            </section>
+            <section>
+                <button style="width:80%;margin-left: 12%;padding: 6px;" ng-click="extlogin()" type="submit" class="btn btn-primary" id="clodurabtnlogin"><i class="{{apiCalled ? 'fa fa-spinner fa-spin fa-lg' : ''}}"></i> Sign in</button>
+            </section>
+            <section style="color: gray;margin-left: 2%;text-align: center;">Do not have an account?</section>
+            <section><a href="https://product.clodura.ai/#!/signup" target="_blank"><div style="width:80%;margin-left: 12%;padding: 6px;" class="btn btn-default" name="signup" id="signup">Create an account</div></a></section>
+<!--            <section ng-if="login_failed" style="padding-left:39px">Invalid Password..! Please Try Again!</section>-->
+            <section ng-if="wrong_data=='wrong_password'" style="padding-left:39px">Invalid Password..! Please Try Again!</section>
+            <section ng-if="wrong_data=='wrong_email'" style="padding-left:39px">Invalid Email Address..! Please Try Again!</section>
+            <section ng-if="wrong_data=='unsub_user'" style="padding-left:39px">User is Unsubscribed..! Please Subscribe Again to Login!</section>
+            <section ng-if="wrong_data=='log_failed'" style="padding-left:39px">Login Failed..! Please Try Again!</section>
+        </fieldset>
+    </form>
+</div>

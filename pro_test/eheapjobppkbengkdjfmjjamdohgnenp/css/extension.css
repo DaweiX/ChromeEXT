@@ -1,0 +1,1242 @@
+.clearfix:after, #meucupom-extension .mc-top-bar:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+#meucupom-extension .mc-top-bar .mc-minimize {
+  width: 16px;
+  height: 14px;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/minimize.png"); }
+
+#meucupom-extension .mc-top-bar .mc-close {
+  width: 16px;
+  height: 14px;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/close.png"); }
+
+#meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-name-hover, #meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-name {
+  width: 131px;
+  height: 44px;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/tag-logo-name.png"); }
+
+#meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-name-hover {
+  background-position: 0 44px; }
+
+#meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-img-hover, #meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-img {
+  width: 44px;
+  height: 44px;
+  background-size: 44px 44px;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/tag-logo-img.png"); }
+
+#meucupom-extension .logo-img-complete {
+  width: 280px;
+  height: 72px;
+  background-size: 100%;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/meu-cupom-alerta.png");
+  background-repeat: no-repeat; }
+
+#meucupom-extension .fb-login-btn {
+  width: 265px;
+  height: 32px;
+  background-size: 100%;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/btn-login-facebook.png");
+  background-repeat: no-repeat; }
+
+#meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-img-hover {
+  background-position: 0 44px; }
+
+#meucupom-extension .mc-dialog-box .mc-img-icon {
+  width: 19px;
+  height: 19px;
+  background-size: contain;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/icons/icon96-active.png"); }
+
+#meucupom-extension #retractable .mc-status-panel:after {
+  content: url("chrome-extension://__MSG_@@extension_id__/images/scissors.png");
+  width: 22px;
+  height: 11px; }
+
+#meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .mc-show-more .mc-show-more-plus {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/show-more-plus.png");
+  width: 11px;
+  height: 10px;
+  background-position: 0 10px; }
+
+#meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .mc-show-more-hover .mc-show-more-plus {
+  background-position: 0 0; }
+
+#meucupom-extension #retractable .mc-coupons .mc-coupon .mc-coupon-head {
+  width: 45px;
+  height: 10px;
+  background-size: 45px 10px;
+  background-repeat: repeat-y;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/coupon-head.png"); }
+
+#meucupom-extension #retractable .mc-coupons .mc-coupon .mc-coupon-head .mc-top {
+  width: 21px;
+  height: 20px;
+  background-size: 21px 20px;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/top.png"); }
+
+#meucupom-extension #retractable .mc-cashback-icon, #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .cashback-icon {
+  width: 17px;
+  height: 17px;
+  background-size: 17px 17px;
+  background-repeat: no-repeat;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/cashback.png");
+  display: inline-block; }
+
+#meucupom-extension #retractable .picpay-green {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/icone_verde.png");
+  display: inline-block; }
+
+#meucupom-extension #retractable .picpay-gray {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/icone_cinza.png");
+  display: inline-block; }
+
+#meucupom-extension #retractable .mc-coupons .mc-single .mc-code, #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-code {
+  color: #3c3c3c;
+  background-color: transparent;
+  border: 1px solid #4495ca;
+  border-radius: 3px;
+  text-align: center;
+  height: 20px;
+  line-height: 21px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 5px; }
+  #meucupom-extension #retractable .mc-coupons .mc-single .mc-code input, #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-code input {
+    color: #3c3c3c;
+    width: 100%;
+    height: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0;
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    background: none;
+    border: transparent; }
+
+#meucupom-extension .mc-dialog-box .mc-btn-ok, #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-btn-panel .mc-btn {
+  display: block;
+  width: 272px;
+  height: 27px;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4495ca;
+  font-weight: normal;
+  font-size: 13px;
+  border-radius: 5px; }
+  #meucupom-extension .mc-dialog-box .mc-btn-ok span, #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-btn-panel .mc-btn span {
+    display: block;
+    line-height: 28px; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/icons/icomoon.eot?-yjwkqk");
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/icons/icomoon.eot?#iefix-yjwkqk") format("embedded-opentype"), url("chrome-extension://__MSG_@@extension_id__/fonts/icons/icomoon.woff?-yjwkqk") format("woff"), url("chrome-extension://__MSG_@@extension_id__/fonts/icons/icomoon.ttf?-yjwkqk") format("truetype"), url("chrome-extension://__MSG_@@extension_id__/fonts/icons/icomoon.svg?-yjwkqk#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="mc-icon-"], [class*=" mc-icon-"] {
+  background: none !important;
+  display: inline !important;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-saiba_mais:before {
+  content: "\e900"; }
+
+.icon-automotivo:before {
+  content: "\e901"; }
+
+.icon-cutura:before {
+  content: "\e902"; }
+
+.icon-farmacia:before {
+  content: "\e903"; }
+
+.icon-informatica:before {
+  content: "\e904"; }
+
+.icon-instrumentos:before {
+  content: "\e905"; }
+
+.icon-moda_masculina:before {
+  content: "\e906"; }
+
+.icon-edit:before {
+  content: "\e67e"; }
+
+.icon-dia_dos_pais2:before {
+  content: "\e676"; }
+
+.icon-dia_dos_pais:before {
+  content: "\e675"; }
+
+.icon-mail:before {
+  content: "\e670"; }
+
+.icon-paperplane2:before {
+  content: "\e671"; }
+
+.icon-shop:before {
+  content: "\e672"; }
+
+.icon-truck:before {
+  content: "\e673"; }
+
+.icon-world:before {
+  content: "\e674"; }
+
+.icon-balloon-acessorios:before {
+  content: "\e65f"; }
+
+.icon-balloon-autos:before {
+  content: "\e669"; }
+
+.icon-cat-beleza_2:before {
+  content: "\e66a"; }
+
+.icon-ballon-beleza_2:before {
+  content: "\e66b"; }
+
+.icon-balloon-eletro_2:before {
+  content: "\e66c"; }
+
+.icon-balloon-frete_gratis:before {
+  content: "\e66d"; }
+
+.icon-balloon-inform_2:before {
+  content: "\e66e"; }
+
+.icon-maquiagem:before {
+  content: "\e66f"; }
+
+.icon-health:before {
+  content: "\e660"; }
+
+.icon-cat-acessorios:before {
+  content: "\e661"; }
+
+.icon-folder:before {
+  content: "\e662"; }
+
+.icon-cat-eletro_2:before {
+  content: "\e663"; }
+
+.icon-cat-inform_2:before {
+  content: "\e664"; }
+
+.icon-diamond2:before {
+  content: "\e665"; }
+
+.icon-brush:before {
+  content: "\e666"; }
+
+.icon-cat-autos:before {
+  content: "\e667"; }
+
+.icon-shipping:before {
+  content: "\e668"; }
+
+.icon-cat-frete_gratis:before {
+  content: "\f0d1"; }
+
+.icon-lockedheart:before {
+  content: "\e65e"; }
+
+.icon-cat-dia-das-maes:before {
+  content: "\e65d"; }
+
+.icon-novidade:before {
+  content: "\e65c"; }
+
+.icon-online2:before {
+  content: "\e65b"; }
+
+.icon-usuario:before {
+  content: "\e65a"; }
+
+.icon-balloon-alimentos-e-bebidas:before {
+  content: "\e644"; }
+
+.icon-balloon-animais-pet:before {
+  content: "\e645"; }
+
+.icon-balloon-bebe-criancas:before {
+  content: "\e646"; }
+
+.icon-balloon-beleza:before {
+  content: "\e647"; }
+
+.icon-balloon-calcados:before {
+  content: "\e649"; }
+
+.icon-balloon-moveis:before {
+  content: "\e64a"; }
+
+.icon-balloon-educacao:before {
+  content: "\e64b"; }
+
+.icon-balloon-eletrodomesticos:before {
+  content: "\e64c"; }
+
+.icon-balloon-eletronicos:before {
+  content: "\e64d"; }
+
+.icon-balloon-esportes:before {
+  content: "\e64e"; }
+
+.icon-balloon-cine-foto:before {
+  content: "\e64f"; }
+
+.icon-balloon-games:before {
+  content: "\e650"; }
+
+.icon-balloon-informatica:before {
+  content: "\e651"; }
+
+.icon-balloon-livros:before {
+  content: "\e652"; }
+
+.icon-balloon-moda-feminina:before {
+  content: "\e653"; }
+
+.icon-balloon-moda-masculina:before {
+  content: "\e654"; }
+
+.icon-balloon-notebooks:before {
+  content: "\e655"; }
+
+.icon-balloon-smartphone-tablet:before {
+  content: "\e656"; }
+
+.icon-balloon-tv-audio:before {
+  content: "\e657"; }
+
+.icon-balloon-viagem:before {
+  content: "\e658"; }
+
+.icon-balloon2:before {
+  content: "\e659"; }
+
+.icon-meucupom:before {
+  content: "\e621"; }
+
+.icon-balloon:before {
+  content: "\e642"; }
+
+.icon-cat-beleza:before {
+  content: "\e643"; }
+
+.icon-topcupons2:before {
+  content: "\e648"; }
+
+.icon-pig:before {
+  content: "\e63c"; }
+
+.icon-info3:before {
+  content: "\e641"; }
+
+.icon-coin:before {
+  content: "\e636"; }
+
+.icon-coin2:before {
+  content: "\e637"; }
+
+.icon-cancel:before {
+  content: "\e638"; }
+
+.icon-megaphone2:before {
+  content: "\e639"; }
+
+.icon-cat-moda-masculina:before {
+  content: "\e600"; }
+
+.icon-cat-bebe-criancas:before {
+  content: "\e61a"; }
+
+.icon-cat-casa-jardim:before {
+  content: "\e620"; }
+
+.icon-cat-moda-feminina:before {
+  content: "\e623"; }
+
+.icon-cat-filmes-musicas:before {
+  content: "\e631"; }
+
+.icon-cat-informatica:before {
+  content: "\e632"; }
+
+.icon-menutag:before {
+  content: "\e624"; }
+
+.icon-calendar:before {
+  content: "\e625"; }
+
+.icon-alarmclock:before {
+  content: "\e626"; }
+
+.icon-checkmark:before {
+  content: "\e627"; }
+
+.icon-info2:before {
+  content: "\e628"; }
+
+.icon-paperplane:before {
+  content: "\e629"; }
+
+.icon-barcode2:before {
+  content: "\e62a"; }
+
+.icon-cat-alimentos-e-bebidas:before {
+  content: "\e622"; }
+
+.icon-online:before {
+  content: "\e609"; }
+
+.icon-male2:before {
+  content: "\e60c"; }
+
+.icon-female:before {
+  content: "\e614"; }
+
+.icon-male:before {
+  content: "\e615"; }
+
+.icon-coracao:before {
+  content: "\e601"; }
+
+.icon-coracaocheio:before {
+  content: "\e602"; }
+
+.icon-cat-educacao:before {
+  content: "\e603"; }
+
+.icon-cat-eletrodomesticos:before {
+  content: "\e604"; }
+
+.icon-cat-eletronicos:before {
+  content: "\e605"; }
+
+.icon-cat-esportes:before {
+  content: "\e606"; }
+
+.icon-favoritos:before {
+  content: "\e607"; }
+
+.icon-favoritoscheio:before {
+  content: "\e608"; }
+
+.icon-cat-games:before {
+  content: "\e60a"; }
+
+.icon-cat-livros:before {
+  content: "\e60b"; }
+
+.icon-cat-calcados:before {
+  content: "\e60d"; }
+
+.icon-cat-notebooks:before {
+  content: "\e60e"; }
+
+.icon-cat-animais-pet:before {
+  content: "\e60f"; }
+
+.icon-tag:before {
+  content: "\e619"; }
+
+.icon-magnifier:before {
+  content: "\e61b"; }
+
+.icon-megaphone:before {
+  content: "\e61c"; }
+
+.icon-tools:before {
+  content: "\e61d"; }
+
+.icon-envelope:before {
+  content: "\e616"; }
+
+.icon-info:before {
+  content: "\e61e"; }
+
+.icon-tags:before {
+  content: "\e617"; }
+
+.icon-minus3:before {
+  content: "\e67f"; }
+
+.icon-plus:before {
+  content: "\e680"; }
+
+.icon-cancel2:before {
+  content: "\e681"; }
+
+.icon-photo_camera:before {
+  content: "\e1a4"; }
+
+.icon-file-add:before {
+  content: "\e63d"; }
+
+.icon-attach-money:before {
+  content: "\e633"; }
+
+.icon-social-facebook:before {
+  content: "\e63a"; }
+
+.icon-share:before {
+  content: "\e618"; }
+
+.icon-mapmarker:before {
+  content: "\e61f"; }
+
+.icon-youtube-with-circle:before {
+  content: "\e63e"; }
+
+.icon-youtube:before {
+  content: "\e63f"; }
+
+.icon-credit:before {
+  content: "\e634"; }
+
+.icon-chevron-small-down:before {
+  content: "\e62b"; }
+
+.icon-chevron-small-left:before {
+  content: "\e62c"; }
+
+.icon-chevron-small-right:before {
+  content: "\e62d"; }
+
+.icon-chevron-small-up:before {
+  content: "\e62e"; }
+
+.icon-thumbs-down:before {
+  content: "\e62f"; }
+
+.icon-thumbs-up:before {
+  content: "\e630"; }
+
+.icon-basket:before {
+  content: "\e677"; }
+
+.icon-home3:before {
+  content: "\e678"; }
+
+.icon-profile:before {
+  content: "\e679"; }
+
+.icon-bubble:before {
+  content: "\e67c"; }
+
+.icon-users:before {
+  content: "\e67b"; }
+
+.icon-key:before {
+  content: "\e67d"; }
+
+.icon-cog2:before {
+  content: "\e67a"; }
+
+.icon-folder-open:before {
+  content: "\e930"; }
+
+.icon-site:before {
+  content: "\e9c9"; }
+
+.icon-google-plus2:before {
+  content: "\ea89"; }
+
+.icon-youtube2:before {
+  content: "\ea97"; }
+
+.icon-youtube3:before {
+  content: "\ea99"; }
+
+.icon-apple:before {
+  content: "\eabf"; }
+
+.icon-linkedin:before {
+  content: "\eac8"; }
+
+.icon-instagram:before {
+  content: "\ea90"; }
+
+.icon-pinterest2:before {
+  content: "\ead1"; }
+
+.icon-play-alt:before {
+  content: "\e640"; }
+
+.icon-lock:before {
+  content: "\e98f"; }
+
+.icon-unlocked:before {
+  content: "\e990"; }
+
+.icon-cog:before {
+  content: "\e635"; }
+
+.icon-coin-dollar:before {
+  content: "\e93b"; }
+
+.icon-move-vertical:before {
+  content: "\e63b"; }
+
+.icon-cat-smartphone-tablet:before {
+  content: "\e610"; }
+
+.icon-tag2:before {
+  content: "\e611"; }
+
+.icon-topcupons:before {
+  content: "\e612"; }
+
+.icon-cat-tv-audio:before {
+  content: "\e613"; }
+
+.icon-barcode:before {
+  content: "\e937"; }
+
+.icon-cart:before {
+  content: "\e93a"; }
+
+.icon-map:before {
+  content: "\e94b"; }
+
+.icon-map2:before {
+  content: "\e94c"; }
+
+.icon-cat-viagem:before {
+  content: "\e9af"; }
+
+.icon-plus2:before {
+  content: "\ea0a"; }
+
+.icon-minus2:before {
+  content: "\ea0b"; }
+
+.icon-play3:before {
+  content: "\ea1c"; }
+
+.icon-arrow-up:before {
+  content: "\ea32"; }
+
+.icon-arrow-down:before {
+  content: "\ea36"; }
+
+.icon-ctrl:before {
+  content: "\ea50"; }
+
+.icon-share2:before {
+  content: "\ea82"; }
+
+.icon-facebook2:before {
+  content: "\ea8d"; }
+
+.icon-twitter2:before {
+  content: "\ea92"; }
+
+.icon-pencil:before {
+  content: "\f040"; }
+
+.icon-arrow-left:before {
+  content: "\f060"; }
+
+.icon-arrow-right:before {
+  content: "\f061"; }
+
+.icon-arrow-up2:before {
+  content: "\f062"; }
+
+.icon-arrow-down2:before {
+  content: "\f063"; }
+
+.icon-paper-plane:before {
+  content: "\f1d8"; }
+
+.icon-send:before {
+  content: "\f1d8"; }
+
+.icon-diamond:before {
+  content: "\f219"; }
+
+#meucupom-extension {
+  z-index: 2147483647;
+  font-size: 16px;
+  line-height: 16px;
+  position: fixed;
+  width: 460px;
+  height: 580px;
+  top: 0;
+  right: -450px;
+  color: #3c3c3c;
+  text-align: left; }
+  #meucupom-extension .mc-col-1 {
+    width: 53px;
+    float: left !important; }
+  #meucupom-extension .mc-span-1 {
+    margin-left: 53px; }
+  #meucupom-extension .mc-fluid-col-1 {
+    width: 12%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-1 {
+    margin-left: 12%; }
+  #meucupom-extension .mc-col-2 {
+    width: 107px;
+    float: left !important; }
+  #meucupom-extension .mc-span-2 {
+    margin-left: 107px; }
+  #meucupom-extension .mc-fluid-col-2 {
+    width: 25%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-2 {
+    margin-left: 25%; }
+  #meucupom-extension .mc-col-3 {
+    width: 161px;
+    float: left !important; }
+  #meucupom-extension .mc-span-3 {
+    margin-left: 161px; }
+  #meucupom-extension .mc-fluid-col-3 {
+    width: 37%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-3 {
+    margin-left: 37%; }
+  #meucupom-extension .mc-col-4 {
+    width: 215px;
+    float: left !important; }
+  #meucupom-extension .mc-span-4 {
+    margin-left: 215px; }
+  #meucupom-extension .mc-fluid-col-4 {
+    width: 50%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-4 {
+    margin-left: 50%; }
+  #meucupom-extension .mc-col-5 {
+    width: 268px;
+    float: left !important; }
+  #meucupom-extension .mc-span-5 {
+    margin-left: 268px; }
+  #meucupom-extension .mc-fluid-col-5 {
+    width: 62%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-5 {
+    margin-left: 62%; }
+  #meucupom-extension .mc-col-6 {
+    width: 322px;
+    float: left !important; }
+  #meucupom-extension .mc-span-6 {
+    margin-left: 322px; }
+  #meucupom-extension .mc-fluid-col-6 {
+    width: 75%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-6 {
+    margin-left: 75%; }
+  #meucupom-extension .mc-col-7 {
+    width: 376px;
+    float: left !important; }
+  #meucupom-extension .mc-span-7 {
+    margin-left: 376px; }
+  #meucupom-extension .mc-fluid-col-7 {
+    width: 87%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-7 {
+    margin-left: 87%; }
+  #meucupom-extension .mc-col-8 {
+    width: 430px;
+    float: left !important; }
+  #meucupom-extension .mc-span-8 {
+    margin-left: 430px; }
+  #meucupom-extension .mc-fluid-col-8 {
+    width: 100%;
+    float: left !important; }
+  #meucupom-extension .mc-fluid-span-8 {
+    margin-left: 100%; }
+  #meucupom-extension .mc-row {
+    overflow: hidden;
+    *zoom: 1;
+    padding: 10px !important;
+    margin: 0; }
+  #meucupom-extension .mc-fluid-row {
+    overflow: hidden;
+    *zoom: 1;
+    padding: 2% !important;
+    margin: 0; }
+  #meucupom-extension .mc-row-raw {
+    overflow: hidden;
+    *zoom: 1; }
+  #meucupom-extension * {
+    font-family: Arial, Helvetica, Sans-serif;
+    box-sizing: content-box;
+    line-height: inherit; }
+  #meucupom-extension span.mc-number {
+    color: #4495ca; }
+  #meucupom-extension .mc-gray {
+    background-color: #f6f6f6; }
+    #meucupom-extension .mc-gray .mc-line {
+      border-bottom: 1px solid #cdcdcd;
+      width: 420px;
+      margin: 0 auto; }
+  #meucupom-extension .mc-login-modal {
+    position: absolute;
+    height: 580px;
+    width: 460px;
+    top: 0px;
+    right: 0px;
+    background-color: #4495ca;
+    z-index: 2;
+    display: none; }
+  #meucupom-extension .login-form-wrapper {
+    background-color: #f6f6f6;
+    width: 75%;
+    height: 520px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    padding: 30px;
+    box-sizing: border-box; }
+    #meucupom-extension .login-form-wrapper a {
+      color: #4495ca;
+      font-size: 12px; }
+    #meucupom-extension .login-form-wrapper .links-wrapper {
+      width: 265px;
+      margin: 0 auto; }
+    #meucupom-extension .login-form-wrapper .dismiss-login {
+      float: right; }
+  #meucupom-extension .login-form-text {
+    text-align: center;
+    color: #999999;
+    font-size: 15px;
+    margin-top: 30px; }
+  #meucupom-extension .mc-line {
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 25px; }
+    #meucupom-extension .mc-line span {
+      position: relative;
+      top: -8px;
+      background-color: #f6f6f6;
+      display: inline-block;
+      padding: 0 6px;
+      color: #cdcdcd; }
+  #meucupom-extension .logo-img-complete {
+    margin: 0 auto; }
+  #meucupom-extension .fb-login-btn {
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px; }
+  #meucupom-extension .mc-login-form label {
+    display: block; }
+  #meucupom-extension .mc-login-form .mc-form-input {
+    box-sizing: border-box;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 265px;
+    height: 28px;
+    margin: 10px auto;
+    padding: 16px 10px;
+    font-size: 13px; }
+  #meucupom-extension .mc-login-form .mc-form-submit-btn {
+    box-sizing: border-box;
+    width: 265px;
+    height: 30px;
+    border-radius: 3px;
+    border-color: transparent;
+    margin: 20px auto;
+    color: #fff;
+    background-color: #4495ca;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.3px; }
+  #meucupom-extension .mc-dialog-box {
+    width: 200px;
+    position: absolute;
+    top: 46px;
+    right: 475px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: none;
+    padding: 10px;
+    font-size: 0.8em;
+    z-index: 9; }
+    #meucupom-extension .mc-dialog-box .mc-img-icon {
+      display: inline-block; }
+    #meucupom-extension .mc-dialog-box .mc-btn-ok {
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 80px;
+      height: 15px;
+      margin-top: 8px; }
+      #meucupom-extension .mc-dialog-box .mc-btn-ok span {
+        line-height: 0; }
+  #meucupom-extension.opened .mc-dialog-box {
+    right: 330px; }
+  #meucupom-extension .mc-top-bar {
+    cursor: default;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    pointer-events: none; }
+    #meucupom-extension .mc-top-bar .mc-tag {
+      width: 185px;
+      height: 44px;
+      float: left; }
+      #meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-name {
+        float: left;
+        position: relative; }
+      #meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-img {
+        float: left;
+        background-color: transparent;
+        position: relative;
+        pointer-events: auto; }
+        #meucupom-extension .mc-top-bar .mc-tag .mc-tag-logo-img span {
+          width: 12px;
+          height: 12px;
+          display: block;
+          text-align: center;
+          line-height: 13px;
+          background-color: #ecc741;
+          color: #3c3c3c;
+          border-radius: 100%;
+          position: relative;
+          left: 23px;
+          top: 26px;
+          font-size: 12px;
+          padding: 3px; }
+    #meucupom-extension .mc-top-bar .mc-user-info {
+      float: left;
+      padding-top: 18px;
+      text-align: right;
+      width: 230px;
+      font-size: 16px; }
+      #meucupom-extension .mc-top-bar .mc-user-info span {
+        font-size: 16px; }
+      #meucupom-extension .mc-top-bar .mc-user-info .mc-username-wrapper {
+        display: inline-block; }
+      #meucupom-extension .mc-top-bar .mc-user-info a, #meucupom-extension .mc-top-bar .mc-user-info .mc-username {
+        vertical-align: super;
+        color: #3c3c3c;
+        font-size: 16px;
+        text-decoration: none; }
+      #meucupom-extension .mc-top-bar .mc-user-info .icon-usuario {
+        background-color: #999999 !important;
+        color: #3c3c3c;
+        border-radius: 50%;
+        padding: 3px;
+        font-size: 28px;
+        margin-left: 8px; }
+      #meucupom-extension .mc-top-bar .mc-user-info .profile-image-wrapper {
+        width: 34px;
+        height: 34px;
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        vertical-align: sub;
+        margin: -9px 20px 0 8px; }
+        #meucupom-extension .mc-top-bar .mc-user-info .profile-image-wrapper img {
+          width: 100%; }
+      #meucupom-extension .mc-top-bar .mc-user-info .logout-tooltip {
+        display: none;
+        position: absolute;
+        right: 45px;
+        background-color: #fff;
+        padding: 3px 15px;
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+        border-top: 3px solid #4495ca; }
+        #meucupom-extension .mc-top-bar .mc-user-info .logout-tooltip:before {
+          content: '';
+          position: absolute;
+          top: -8px;
+          left: 5px;
+          border-bottom: 5px solid #4495ca;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent; }
+      #meucupom-extension .mc-top-bar .mc-user-info .mc-username-wrapper:hover .logout-tooltip {
+        display: block; }
+      #meucupom-extension .mc-top-bar .mc-user-info .mc-logout-btn {
+        font-size: 13px;
+        vertical-align: middle; }
+    #meucupom-extension .mc-top-bar .mc-minimize {
+      float: right; }
+    #meucupom-extension .mc-top-bar .mc-close {
+      float: right; }
+  #meucupom-extension #retractable {
+    background: #f6f6f6;
+    overflow: hidden;
+    height: 0;
+    -webkit-box-shadow: -9px 9px 26px -15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -9px 9px 26px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: -9px 9px 26px -15px rgba(0, 0, 0, 0.75); }
+    #meucupom-extension #retractable .mc-status-panel {
+      margin-top: -15px;
+      position: relative;
+      top: 15px;
+      font-size: 0.8em; }
+      #meucupom-extension #retractable .mc-status-panel:after {
+        position: relative;
+        top: -5px;
+        right: -345px; }
+    #meucupom-extension #retractable .cashback-cta {
+      padding: 5px 20px;
+      overflow: hidden; }
+      #meucupom-extension #retractable .cashback-cta p {
+        display: inline-block; }
+    #meucupom-extension #retractable .mc-cashback-cta {
+      font-size: 14px;
+      margin: 0; }
+    #meucupom-extension #retractable .mc-cashback-icon {
+      width: 30px;
+      height: 30px;
+      background-size: 27px 27px; }
+    #meucupom-extension #retractable .cb-more-info {
+      font-size: 10px;
+      color: #999999; }
+      #meucupom-extension #retractable .cb-more-info:hover {
+        text-decoration: none; }
+      #meucupom-extension #retractable .cb-more-info i {
+        margin-right: 3px; }
+    #meucupom-extension #retractable .cashback-user-data {
+      padding: 5px 0; }
+    #meucupom-extension #retractable .cashback-info-left {
+      display: inline-block;
+      margin-left: 20px;
+      margin-right: 60px; }
+      #meucupom-extension #retractable .cashback-info-left .cashback-title {
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0; }
+    #meucupom-extension #retractable .cashback-info-right {
+      display: inline-block;
+      vertical-align: bottom; }
+      #meucupom-extension #retractable .cashback-info-right .pending-value {
+        display: inline-block; }
+      #meucupom-extension #retractable .cashback-info-right .avaiable-value {
+        display: inline-block;
+        margin-right: 30px; }
+      #meucupom-extension #retractable .cashback-info-right .value-wrapper {
+        display: inline-block;
+        vertical-align: top; }
+        #meucupom-extension #retractable .cashback-info-right .value-wrapper .value {
+          display: block;
+          font-size: 13px;
+          line-height: 5px;
+          font-weight: bold;
+          margin-top: 7px;
+          margin-bottom: 5px; }
+        #meucupom-extension #retractable .cashback-info-right .value-wrapper .section-title {
+          font-size: 12px;
+          line-height: 8px; }
+    #meucupom-extension #retractable .mc-coupons {
+      width: 458px;
+      height: 431px;
+      overflow: scroll;
+      overflow-x: hidden;
+      padding-top: 10px; }
+      #meucupom-extension #retractable .mc-coupons::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px; }
+      #meucupom-extension #retractable .mc-coupons::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
+      #meucupom-extension #retractable .mc-coupons .mc-single {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        margin-top: 10px; }
+        #meucupom-extension #retractable .mc-coupons .mc-single .mc-single-content {
+          color: #3c3c3c;
+          text-align: center;
+          height: 80px; }
+          #meucupom-extension #retractable .mc-coupons .mc-single .mc-single-content .centre {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+          #meucupom-extension #retractable .mc-coupons .mc-single .mc-single-content p {
+            line-height: 25px;
+            font-size: 0.9em; }
+          #meucupom-extension #retractable .mc-coupons .mc-single .mc-single-content .mc-title {
+            color: #3c3c3c;
+            font-weight: bold; }
+        #meucupom-extension #retractable .mc-coupons .mc-single .mc-links a {
+          font-size: 0.9em;
+          color: #4495ca; }
+          #meucupom-extension #retractable .mc-coupons .mc-single .mc-links a .mc-icon-pig {
+            line-height: 0px;
+            font-size: 21px;
+            position: relative;
+            top: 4px; }
+        #meucupom-extension #retractable .mc-coupons .mc-single .mc-links .mc-last {
+          text-align: right; }
+      #meucupom-extension #retractable .mc-coupons .mc-coupon {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-color: white;
+        border: 1px solid #cdcdcd;
+        border-radius: 6px 0 0 6px; }
+        #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-coupon-head {
+          width: 45px;
+          height: 100px;
+          float: left;
+          border-radius: 3px 0 0 3px; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-coupon-head .mc-discount {
+            width: 90px;
+            position: relative;
+            top: 43px;
+            left: -33px;
+            color: #fff;
+            transform: rotate(270deg);
+            text-align: center;
+            font-size: 13px; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-coupon-head .mc-category {
+            font-size: 11px;
+            position: relative;
+            width: 90px;
+            top: 30px;
+            left: -13px;
+            text-align: center;
+            color: #ecc741;
+            transform: rotate(270deg); }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-coupon-head .mc-top {
+            position: relative;
+            top: -38px;
+            left: 25px; }
+        #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-coupon-container {
+          float: left;
+          width: 365px;
+          height: 80px; }
+        #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-logo {
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%); }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-logo img {
+            width: 85px; }
+        #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content {
+          padding-left: 15px;
+          width: 255px;
+          height: 100%;
+          cursor: default;
+          border-left: 1px solid #cdcdcd; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .mc-title {
+            color: #3c3c3c;
+            font-size: 15px; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .mc-description {
+            height: 0;
+            overflow: hidden;
+            font-size: 11px;
+            color: #3c3c3c; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .mc-show-more {
+            font-size: 0.7em;
+            color: #3c3c3c;
+            margin-top: 5px; }
+            #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .mc-show-more .mc-show-more-plus {
+              display: inline-block; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .cashback-rate {
+            float: right; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .cashback-icon {
+            vertical-align: bottom;
+            margin-right: 3px; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-content .mc-show-more-hover {
+            color: #4d4d4d; }
+        #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-btn-panel {
+          padding-left: 5px;
+          margin-top: -30px; }
+          #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-btn-panel .mc-btn {
+            margin-top: 7px;
+            width: 260px;
+            margin-left: 10px; }
+        #meucupom-extension #retractable .mc-coupons .mc-coupon .mc-code {
+          width: 220px;
+          height: 15px;
+          line-height: 15px;
+          margin-top: 5px; }
+    #meucupom-extension #retractable .mc-go-to-meucupom {
+      text-align: center;
+      margin-top: 0;
+      padding-top: 11px;
+      border-top: solid 1px #fff;
+      height: 25px;
+      background-color: #cdcdcd;
+      font-size: 0.8em;
+      bottom: 47px; }
+      #meucupom-extension #retractable .mc-go-to-meucupom a {
+        color: #999999;
+        text-decoration: none; }
+  #meucupom-extension .mc-bottom-description {
+    line-height: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #fff;
+    min-height: 0;
+    height: 0;
+    background-color: rgba(60, 60, 60, 0.7);
+    overflow: hidden; }
+    #meucupom-extension .mc-bottom-description div {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+  #meucupom-extension .mc-overlay-outside-click {
+    position: fixed;
+    width: 100%;
+    height: 1000px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: -1; }
+  #meucupom-extension .mc-product-image {
+    width: 80px !important; }
+  #meucupom-extension .mc-clickable {
+    cursor: pointer; }
+
+@media print {
+  #meucupom-extension {
+    display: none; } }

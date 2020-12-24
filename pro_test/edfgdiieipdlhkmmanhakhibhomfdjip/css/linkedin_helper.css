@@ -1,0 +1,347 @@
+/* LinkedIn Changes */
+
+#top-card .profile-actions .katy-button-group.button-group-secondary .more-options.dropdown-caret {
+  padding-left: 5px;
+}
+
+/* Prospector Box */
+
+#prospector-box {
+  position: fixed;
+  width: 300px;
+  top: 80px;
+  right: 0;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #aaa;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+  box-sizing: border-box;
+}
+
+#prospector-box .salesloft-logo {
+  display: block;
+  height: 30px;
+  width: 132px;
+  background: transparent url("http://clodura.com/prospector/linkedin.logo.png") no-repeat top left;
+  background-size: 132px 30px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+}
+
+#prospector-box #hide-prospector-box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+}
+
+#prospector-box .add-to-prospector,
+#prospector-modal .add-to-prospector {
+  display: block;
+  position: relative;
+  margin: 10px 0 0;
+  padding: 0 6px;
+  background-image: -webkit-linear-gradient(bottom, #2d90e9 0%, #1d7ae3 18%, #5cb7f2 100%);
+  color: #fff !important;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  vertical-align: top;
+  border: 1px solid #226dad;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.33), 0 1px 1px 0 rgba(0, 41, 117, 0.33);
+}
+
+#prospector-box .add-to-prospector:hover,
+#prospector-modal .add-to-prospector:hover {
+  background-image: -webkit-linear-gradient(bottom, #207be2 0%, #186dde 18%, #50adf0 100%);
+  text-decoration: none;
+}
+
+#prospector-box .add-to-prospector:active,
+#prospector-modal .add-to-prospector:active {
+  background-image: -webkit-linear-gradient(bottom, #1d7ae2 0%, #196fd0 100%);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#prospector-box .add-to-prospector.loading {
+  background: #eaeaea !important;
+  color: #a8a8a8 !important;
+  text-shadow: none;
+  border: 1px solid #c7c7c7;
+  box-shadow: none;
+  cursor: default;
+}
+
+#prospector-box .prospector-added {
+  margin: 10px 0 0;
+  color: #1e8120;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#prospector-box .prospector-added a {
+  color: #08c;
+  font-weight: normal;
+}
+
+#prospector-box .prospector-added a:hover {
+  text-decoration: none;
+}
+
+#prospector-box .prospector-existing {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+
+#prospector-box .prospector-list {
+  margin: 10px 0 0;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* Box Toggle Button */
+
+#prospector-box-toggle {
+  display: none;
+  position: fixed;
+  top: -1px;
+  right: 20px;
+  padding: 5px 10px;
+  background-color: white;
+  font-size: 14px;
+  border: 1px solid #666;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#prospector-box-toggle.show {
+  display: block;
+  opacity: 1;
+}
+
+#prospector-box-toggle a {
+  color: #08c;
+  font-weight: normal;
+}
+
+#prospector-box-toggle a:hover {
+  text-decoration: none;
+}
+
+/* Company Page */
+
+#prospector-box .prospector-company-added {
+  display: block;
+  margin: 10px 0 0;
+  color: #1e8120;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* SalesForce Searching */
+
+#sfdc-search-box {
+  position: relative;
+  text-align: left;
+  font-size: 13px;
+}
+
+#sfdc-search-box label {
+  display: block;
+  height: 22px;
+  font-size: 12px;
+}
+
+#sfdc-search-box input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 175px;
+  padding: 2px 4px;
+  color: #555;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+#sfdc-search-box .spinner {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  right: 25px;
+}
+
+#sfdc-search-box .spinner.off {
+  display: none;
+}
+
+#sfdc-search-toggle {
+  position: absolute;
+  top: 26px;
+  right: 0;
+}
+
+#sfdc-search-box .no-results {
+  margin: 10px 0 0;
+  color: #888;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+}
+
+#sfdc-search-box .no-results.off {
+  display: none;
+}
+
+#sfdc-search-bar-wrapper .sfdc-error {
+  margin: 10px 0 0;
+  color: #888;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+}
+
+#sfdc-search-results {
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 200px;
+  margin: 10px 0 0;
+}
+
+#sfdc-search-results .result {
+  position: relative;
+  width: 100%;
+  line-height: 20px;
+  font-size: .85em;
+  overflow: hidden;
+}
+
+#sfdc-search-results .company {
+  font-size: 11px;
+  color: #999;
+}
+
+#sfdc-search-results .crm_url {
+  float: right;
+  padding: 0 3px;
+  background-image: -webkit-linear-gradient(bottom, #2d90e9 0%, #1d7ae3 18%, #5cb7f2 100%);
+  color: #fff !important;
+  font-size: 11px;
+  line-height: 15px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  border: 1px solid #226dad;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.33), 0 1px 1px 0 rgba(0,41,117,0.33);
+}
+
+/* Modals */
+
+#prospector-modal-bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-radial-gradient(50% 50%, ellipse closest-corner, rgba(0, 0, 0, 0.25) 1%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 100000;
+}
+
+#prospector-modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 350px;
+  margin-left: -175px;
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-name: zoom-out;
+}
+
+#prospector-modal.in {
+  opacity: 1;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-name: zoom-in;
+}
+
+#prospector-modal h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#prospector-modal p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#prospector-modal .add-to-prospector {
+  display: inline-block;
+  float: none;
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+#prospector-modal-close {
+  float: right;
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  background-image: -webkit-linear-gradient(bottom, #e4e4e4 0%, #f7f7f7 100%);
+  color: #666;
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 1), 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+@-webkit-keyframes zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes zoom-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.98);
+  }
+}

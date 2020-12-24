@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>add-to-list</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="add-to-list-icon" fill="#000000">
+            <g id="Option#3">
+                <g id="Main-Feed-(Product-Options)">
+                    <g id="panel">
+                        <g id="list">
+                            <g id="item#1">
+                                <g id="Group">
+                                    <g id="dropdown">
+                                        <g id="item#1">
+                                            <g id="add-to-list">
+                                                <path d="M1.5,12.5 L12.5,12.5 L12.5,1.5 L1.5,1.5 L1.5,12.5 Z M13.5,0.5 L13.5,13.5 L0.5,13.5 L0.5,0.5 L13.5,0.5 Z" id="Rectangle-path"></path>
+                                                <polygon id="Shape" points="6.5 3.77272727 6.5 10.2272727 7.5 10.2272727 7.5 3.77272727"></polygon>
+                                                <polygon id="Shape" points="10.2272727 6.5 3.77272727 6.5 3.77272727 7.5 10.2272727 7.5"></polygon>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

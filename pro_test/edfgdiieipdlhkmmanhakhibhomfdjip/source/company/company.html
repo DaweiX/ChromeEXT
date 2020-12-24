@@ -1,0 +1,215 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/new_extension.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<style>
+    body{
+        font-family: 'Open Sans', sans-serif;
+    }
+</style>
+
+<div ng-if="!no_company_data" style="margin-top: 70%;">
+    <p class="text-center" style="margin-top: 15px;">
+        <strong> --- No Company Found ---</strong>
+    </p>
+</div>
+<div class="clodura-scrollbar" id="clodura_company_div" ng-if="no_company_data" style="height: 73%;">
+<!--    <img src="../../img/cloduraicon3838.png" style="opacity: 0.18;filter: alpha(opacity=10);width:80%;height: 80%;padding-left: 58px;">-->
+<!--    <img src="https://product.clodura.ai/client/app/assets/images/logo-c.png" style="opacity: 0.18;filter: alpha(opacity=10);width:80%;height: 80%;padding-left: 53px;">-->
+    <div ng-if="company_list && comp_data_len > 1">
+        <div style="padding-left:6%;font-size:13px;"> We have multiple results for this company website,<br> Please select one.
+            <div style="margin-top:2%;">
+                <div style="cursor: pointer;margin-bottom: 2%;float: left;margin-right: 2%;" ng-repeat="(key,value) in company_list">
+                    <span ng-repeat="(name,id) in value">
+                        <button id="{{cid}}" ng-repeat="(cid,web) in id" type="button" class="btn btn-sm btn-default clodura-blueOutlinedBtn"
+                            style="border-radius: 6px;border-color: grey;" ng-click="show_selected_company(cid,web)">{{name}}</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="comp_data_len < 2">
+        <div style="padding-left:6%;font-size:13px;">
+<!--            <div ng-if="company_data.linkedin_link"> <i class="fa fa-linkedin clodura-gradient-text" style="font-size:15px;color:#0a558c;"></i>-->
+<!--                <span style="display:inline;padding-left:10px"><a>{{company_data.linkedin_link}}</a></span></div>-->
+<!--            <div ng-if="company_data.website">-->
+<!--                <i class="fa fa-globe clodura-gradient-text" style="font-size:16px;color:#0a558c;margin-top:6px"></i>-->
+<!--                <span style="display:inline;padding-left:9px"><a>{{company_data.website}}</a></span>-->
+<!--            </div>-->
+
+            <div class="row" title="{{company_data.location == '-' ? 'NA':''}}">
+                <div class="col col-1">
+                    <i class="fa fa-map-marker clodura-gradient-text" style="font-size:17px;color:#0a558c;margin-top:2px;padding-left:1px"></i>
+                </div>
+                <div class="col col-11">
+                    <span>{{company_data.city.length > 0 ? company_data.city + ',' : ''}} {{company_data.state.length > 0 ? company_data.state + ',' : ''}} {{company_data.country.length > 0 ? company_data.country : ''}} {{company_data.location == '-' ? 'NA':''}}</span>
+                </div>
+            </div>
+             <div class="row">
+                 <div class="col col-1">
+                     <i class="fa fa-phone clodura-gradient-text" style="font-size:15px;color:#0a558c;margin-top:6px;padding-left:2px"></i>
+                 </div>
+                 <div class="col col-11">
+                     <span>{{company_data.phone_numbers.join(';') ? company_data.phone_numbers.join(';') : 'NA'}}</span>
+                 </div>
+            </div>
+        </div>
+        <div class="clodura-data-container">
+            <div class="row">
+                <div class="col col-sm-6">
+                    <h6 class="clodura-type-header" >Vertical</h6>
+                </div>
+                <div class="col col-sm-6">
+                    <h6 class="clodura-type-header">Company Type</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-6 clodura-info">
+                    <p>{{company_data.industry ? company_data.industry : 'NA'}}</p>
+                </div>
+                <div class="col col-sm-6 clodura-info">
+                    <p>{{company_data.company_type ? company_data.company_type : 'NA'}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-6">
+                    <h6 class="clodura-type-header" style="width: 49px;">Size</h6>
+                </div>
+                <div class="col col-sm-6">
+                    <h6 class="clodura-type-header" style="width: 49px;">Founded</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-6 clodura-info">
+                    <p>{{company_data.comp_size ? company_data.comp_size : 'NA'}}</p>
+                </div>
+                <div class="col col-sm-6 clodura-info">
+                    <p>{{company_data.founded ? company_data.founded : 'NA'}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-12">
+                    <h6 class="clodura-type-header">Pain Points ({{company_data.painpoints.count ? company_data.painpoints.count : 0}})</h6>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col col-sm-12 clodura-info" >
+                    <p ng-class="trial_user ? 'clodura-blur' : ''" ng-if="company_data.painpoints.count <=10">{{company_data.painpoints.data.join('; &nbsp;') ? company_data.painpoints.data.join('; &nbsp;') : 'NA'}}</p>
+                    <p ng-class="trial_user ? 'clodura-blur' : ''" ng-if="company_data.painpoints.count > 10">{{company_data.painpoints.data.join('; &nbsp;') ? company_data.painpoints.data.join('; &nbsp;') : 'NA'}}.....<a style="font-size: 10px" target="_blank" href="https://product.clodura.ai/#!/app/company">Show More</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-12">
+                    <h6 class="clodura-type-header">Technologies Used ({{company_data.technology_used.count ? company_data.technology_used.count : 0}})</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-12 clodura-info">
+                    <p ng-class="trial_user ? 'clodura-blur' : ''" ng-if="company_data.technology_used.count <=10">{{company_data.technology_used.data.join('; &nbsp;') ? company_data.technology_used.data.join('; &nbsp;') : 'NA'}}</p>
+                    <p ng-class="trial_user ? 'clodura-blur' : ''" ng-if="company_data.technology_used.count > 10">{{company_data.technology_used.data.join('; &nbsp;') ? company_data.technology_used.data.join('; &nbsp;') : 'NA'}}.....<a style="font-size: 10px" target="_blank" href="https://product.clodura.ai/#!/app/company">Show More</a></p>
+
+                    <!--                    <p ng-if="company_data.technology_used.count > 10">{{company_data.technology_used.data.join('; &nbsp;')}}.....<a style="font-size: 10px" target="_blank" href="https://product.clodura.ai/#!/app/company">Show More</a></p>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-12">
+                    <h6 class="clodura-type-header">Languages ({{company_data.languages.count ? company_data.languages.count : 0}})</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-12 clodura-info" >
+                    <p ng-class="trial_user ? 'clodura-blur' : ''" ng-if="company_data.languages.count <= 10">{{company_data.languages.data.join('; &nbsp;') ? company_data.languages.data.join('; &nbsp;') : 'NA'}}</p>
+                    <p ng-class="trial_user ? 'clodura-blur' : ''" ng-if="company_data.languages.count > 10">{{company_data.languages.data.join('; &nbsp;') ? company_data.languages.data.join('; &nbsp;') : 'NA'}}.....<a style="font-size: 10px" target="_blank" href="https://product.clodura.ai/#!/app/company">Show More</a></p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:10px">
+                <div class="col col-sm-12">
+                    <h6 class="clodura-type-header">Products ({{company_data.product_info.count ? company_data.product_info.count : 0}})</h6>
+                </div>
+            </div>
+            <div class="row" ng-if="company_data.product_info.count == 0">
+                <div ng-class="trial_user ? 'clodura-blur' : ''" class="col col-sm-12 clodura-info">NA</div>
+            </div>
+            <div class="row" style="margin-left: -10px;margin-right: 23px;" ng-if="company_data.product_info.count">
+                <div class="table-responsive" style="overflow: hidden !important">
+                    <table class="table">
+                        <thead class="clodura-thead-dark">
+                        <tr>
+                            <th style="width:40%;background-color: white;vertical-align: inherit !important;border-bottom: none !important;">Product Type</th>
+                            <th style="background-color: white;vertical-align: inherit !important;border-bottom: none !important;">Product Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="(k,v) in company_data.product_info.data">
+                                <td ng-class="trial_user ? 'clodura-blur' : ''" style="width:40%">{{k ? k : '-'}}</td>
+                                <td ng-class="trial_user ? 'clodura-blur' : ''" style="word-break: break-all;">{{v.join(', &nbsp;') ? v.join(', &nbsp;') : '-'}}</td>
+                            </tr>
+                            <tr ng-if="company_data.product_info.count > 5">
+                                <td><a style="font-size: 10px" target="_blank" href="https://product.clodura.ai/#!/app/company">Show More</a></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:10px">
+                <div class="col col-sm-12">
+                    <h6 class="clodura-type-header">Similar Companies ({{company_data.similar_companies.total_count ? (company_data.similar_companies.total_count - 1) : 0}})</h6>
+                </div>
+            </div>
+            <div class="row" ng-if="company_data.similar_companies.data.length == 0">
+                <div ng-class="trial_user ? 'clodura-blur' : ''" class="col col-sm-12 clodura-info">NA</div>
+            </div>
+            <div class="row" style="margin-right: 23px;margin-left: -10px;" ng-if="company_data.similar_companies.data.length > 0">
+                <div class="table-responsive">
+                    <table class="table" style="width: 100%;">
+                        <thead class="clodura-thead-dark">
+                        <tr>
+                            <th style="background-color: white;vertical-align: inherit !important;border-bottom: none !important;">Company Name</th>
+                            <th style="background-color: white;vertical-align: inherit !important;border-bottom: none !important;">Size</th>
+                            <th style="background-color: white;vertical-align: inherit !important;border-bottom: none !important;">Tags</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="n in company_data.similar_companies.data">
+                                <td ng-class="trial_user ? 'clodura-blur' : ''">{{n.name ? n.name : '-'}}</td>
+                                <td ng-class="trial_user ? 'clodura-blur' : ''">{{n.comp_size_range ? n.comp_size_range : '-'}}</td>
+                                <td ng-class="trial_user ? 'clodura-blur' : ''" style="word-break: break-all;">{{n.specialities ? n.specialities : '-'}} </td>
+                            </tr>
+                            <tr ng-if="(company_data.similar_companies.total_count - 1) > 5">
+                                <td><a style="font-size: 10px" target="_blank" href="https://product.clodura.ai/#!/app/company">Show More</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--            <div class="row applystyle" ng-repeat="(k,v) in company_data.product_info.data" style="margin-left:8px;margin-right: 14px">-->
+<!--                <div>-->
+<!--                    <span><span style="font-weight: 600;font-size: 12px" class="clodura-type-header">Product Type : </span>{{k}}</span>-->
+<!--                </div></br>-->
+<!--                <div>-->
+<!--                    <span><span style="font-weight: 600" class="clodura-type-header">Product Name : </span>{{v.toString()}}</span>-->
+<!--                </div>-->
+<!--                <span style="border-bottom: 1px solid grey"></span></hr>-->
+<!--            </div>-->
+
+
+

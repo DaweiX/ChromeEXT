@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>list</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="list-icon-active" fill="#000000">
+            <g id="secondary_controls">
+                <g id="item_x23_2">
+                    <g id="list">
+                        <polygon id="Rectangle-path" points="6 0.5 6 6.4 0.1 6.4 0.1 0.5"></polygon>
+                        <polygon id="Rectangle-path_1_" points="6 7.6 6 13.5 0.1 13.5 0.1 7.6"></polygon>
+                        <polygon id="Shape" points="7.2 2.5 13.1 2.5 13.1 1.5 7.2 1.5"></polygon>
+                        <polygon id="Shape_1_" points="7.2 5.5 13.1 5.5 13.1 4.5 7.2 4.5"></polygon>
+                        <polygon id="Shape_2_" points="7.2 9.5 13.1 9.5 13.1 8.5 7.2 8.5"></polygon>
+                        <polygon id="Shape_3_" points="7.2 12.5 13.1 12.5 13.1 11.5 7.2 11.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
