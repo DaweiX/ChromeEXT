@@ -1,21 +1,48 @@
-var myid = 'fapnbolmcjcfifjfkpjfidbkokfldklg';
-var async = require('async');
+// change the value to yours. You can directly change them in bundle.js
+var myid = 'jobmhdjcfeppgkggmdapaakjlkdcpmcc';
+//var honey_path = 'file:///C:/Users/DaweiX/Desktop/Web/autotester/honey4test.html';
+
+var honey_path = "http://localhost:3000/";
+
+var async = require('async');   // browserify popup.js > bundle.js
+var delay = 10000;              // time delay for collecting fingerprint loaded
+// var port = null;
 
 $(document).ready(function () {
-    addlog('AutoTester Init', 'green');
+    var _log = getlog('AutoTester Start');
+    console.log(_log, 'color:green');
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        honey_tag_id = tabs[0].id;
+        $("#p_honey_id").html(honey_tag_id);
+        var _log = getlog('Tab located: ' + honey_tag_id);
+        console.log(_log, 'color:green');
+
+        // port = chrome.tabs.connect(honey_tag_id, { name: "myport" });
+        // port.onMessage.addListener(function (msg) {
+        //     if (msg.success === true) {
+        //         $("#p_honey_id").html(honey_tag_id + "(connected)");
+        //     }
+        //     else if (msg.from_popup) {
+        //         is_ready = true;
+        //     }
+        // });
+    });
+
     var items = document.createElement('div');
     chrome.management.getAll(async function (e) {
-        for (k = 1; k < e.length; k++) {
+        for (k = 0; k < e.length; k++) {
             var i = e[k];
-            if (i.type == "theme") continue;
+            // if (i.type == "theme") continue;
             if (i.id == myid) continue;
             idlist.push(i.id);
-            if (i.enabled) enablednum++;
+            if (i.enabled) count_enabled++;
             items.appendChild(getItemDiv(i));
         }
-        $("#count").html("Ext Count: " + (e.length - 1))
+        $("#p_total").html(e.length - 1);
     });
     $(".list").html(items);
+
+    // List: List all exts in console
     $("#btn1").click(function () {
         chrome.management.getAll(function (e) {
             for (i = 1; i < e.length; i++) {
@@ -23,58 +50,82 @@ $(document).ready(function () {
             }
         });
     });
-    
+
+    // Honey: Launch and pin honey
     $("#btn2").click(function () {
         launchHoney();
     });
-    
+
+    // Start: Start the test
     $("#btn3").click(function () {
         Run();
     });
-    
+
     $("#btn4").click(function () {
-        console.clear();
-        printlog();
-        clearlog();
+        var exId = "jmpepeebcbihafjjadogphmbgiffiajh";
+        chrome.management.launchApp(exId, function () {
+            console.log('App ' + exId + ' has been launched.');
+        }); 
     });
-    
+
+    // Pinpoint honey page
     $("#btn5").click(function () {
-	    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-			honeytag = tabs[0].id;
-			$("#count").html(honeytag);
-		});
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            honey_tag_id = tabs[0].id;
+            $("#p_honey_id").html(honey_tag_id);
+            port = chrome.tabs.connect(honey_tag_id, { name: "myport" });
+            chrome.runtime.onConnect.addListener(function (port) {
+                console.assert(port.name == "myport");
+                port.onMessage.addListener(function (msg) {
+                    console.log(msg);
+                    is_ready = true;
+                    port.postMessage({ from_popup: "Popup response" });
+                });
+            });
+        });
     });
-    
-    
+
+
+    // Unist: Uninstall all exts
     $("#btn6").click(function () {
-	    chrome.management.getAll(function (e) {
+        chrome.management.getAll(function (e) {
             for (i = 1; i < e.length; i++) {
-                 if (e[i].id == myid) continue;
-                 chrome.management.uninstall(e[i].id);
+                if (e[i].id == myid) continue;
+                chrome.management.uninstall(e[i].id);
             }
         });
     });
-    
-    //变量初始化
-    document.count = 0;
-    document.count2 = 0;
-    enablednum = 0;
-    idlist = []
-    honeyid = null;
-    honeytag = null;
-    
-    
 });
 
-var enablednum = 0;
-var idlist = []
-var honeyid = null;
-var honeytag = null;
+count_enabled = 0;
+count_disabled = 0;
+count_tested = 0;
+idlist = []
+honey_tag_id = null;
+
+function gtime() {
+    var date = new Date();
+    return date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+}
+
+function sleep2(time) {
+    return new Promise(resolve => setTimeout(resolve, time))
+}
+
+var sleep = function (time) {
+    var startTime = new Date().getTime() + parseInt(time, 10);
+    while (new Date().getTime() < startTime) { }
+};
+
+function getlog(content, type) {
+    color = typeof color !== 'undefined' ? color : 'gray';
+    type = typeof type !== 'undefined' ? type : 'INFO';
+    return type + '\t' + gtime() + '\t%c' + content;
+}
 
 function launchHoney() {
-    var honey = 'file:///home/honey/Desktop/project/honey_pro/project/views/index.html';
-    chrome.tabs.create({url: honey, pinned: true}, function(tab) {
-        honeyid = tab.id;
+    chrome.tabs.create({ url: honey_path, pinned: true }, function (tab) {
+        honey_tag_id = tab.id;
     });
 }
 
@@ -92,6 +143,7 @@ function getItemDiv(i) {
     //var title = document.createElement('p');
     //title.innerText = i.name;
     var id = document.createElement('p');
+    id.className = "white";
     id.innerText = i.id;
     //div.appendChild(title);
     div.appendChild(id);
@@ -100,100 +152,94 @@ function getItemDiv(i) {
 }
 
 function Run() {
-
-    //launchHoney();
     //close all probably running extensions
-    document.count = 0;
-    document.count2 = 0;
-    
-    for(i = 0; i < idlist.length; i++) {
-        var temp = idlist[i];
+    count_disabled = 0;
+    count_tested = 0;
+
+    for (i = 0; i < idlist.length; i++) {
         async.waterfall([
-            function(cb){
-                chrome.management.setEnabled(temp, false, function() {
-                    document.count++;
+            function (cb) {
+                chrome.management.setEnabled(idlist[i], false, function () {
+                    count_disabled++;
+                    cb(null, null);
                 });
-                //console.log('Extension ' + temp + ' has been disabled ' + count);
-                cb(null, null)
             }],
-            function(err, result) {
-                if (err) console.log(err); 
-                else
-                    if (result)
-                        addlog(result);
+            function (err, result) {
+                if (err) console.log(err, 'color:red');
             }
         );
     }
-    
-    if (document.count == enablednum)
-        addlog('All extensions disabled!', 'green');
-    else {
-        addlog((enablednum - document.count) + ' extensions disabled failed!', 'orange');
-        addlog(document.count + '\t' + enablednum)
-    }
-    
-    var j = 0;
-    async.eachSeries(idlist, function(uuid, callback) {
-        j++;
-        honeytag = honeytag;
+
+    var _log = getlog(count_disabled + ' extensions disabled!');
+    console.log(_log, 'color:green');
+
+    // Waterfall
+    async.eachSeries(idlist, function (uuid, callback) {
         async.waterfall([
-        
-            function(cb) {
-				chrome.management.setEnabled(uuid, true);
-				addlog('Extension ' + uuid + ' has been enabled. ' + j, 'blue');
-				cb(null, uuid);
-			},
-			
-			function (uuid, cb) {
-				chrome.tabs.reload();
-				addlog('Reloaded');
-				cb(null, uuid);
-			},
-			
-			function (uuid, cb) {
-			    addlog('Start sending msg for ' + uuid);			   							
-				chrome.tabs.sendMessage(honeytag, {message: uuid});
-				sleep(8000)
-				cb(null, uuid);
-			},
-			
-			function (uuid, cb) {
-	
-			    chrome.management.setEnabled(uuid, false);
-		        addlog('Extension ' + uuid + ' has been disabled', 'blue');
-		        cb(null, null);
-			}
-		],
-		
-        function(err, result) {
-			chrome.tabs.reload();
-            if (err) addlog(err, 'red', 'ERROR'); 
-            else
-                if (result)
-                    addlog(result, 'gray');
-        })
-        
-        callback();
-        
-    }, function (err) {
+            // function (cb) {
+            //     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            //         honey_tag_id = tabs[0].id;
+            //         $("#p_honey_id").html(honey_tag_id);
+            //         cb(null, null);
+            //     });
+            // },
+
+            function (cb) {
+                chrome.tabs.reload(honey_tag_id, { bypassCache: true },
+                    function () {
+                        var _log = getlog('Honeysite reloaded');
+                        console.log(_log, 'color:pink');
+                        cb(null, uuid);
+                    });
+            },
+
+            function (uuid, cb) {
+                var _log = getlog('ID: ' + uuid + 'sended to honey. Waiting...');
+                console.log(_log, 'color:gray');
+                chrome.tabs.sendMessage(honey_tag_id, { current_ext_id: uuid }, function (res) {
+                    if (res) {
+                        console.log(res);
+                        cb(null, uuid);
+                    }
+                    if (chrome.runtime.lastError) {
+                        console.warn(chrome.runtime.lastError.message);
+                        cb(null, uuid);
+                    }
+                });
+            },
+
+            function (uuid, cb) {
+                $("#p_ext_id").html(uuid);
+                $("#p_tested").html(count_tested);
+                //sleep(delay_pageload);
+                chrome.management.setEnabled(uuid, true, function () {
+                    var _log = getlog('Extension ' + uuid + ' has been enabled.');
+                    console.log(_log, 'color:blue');
+                    cb(null, uuid);
+                });
+            },
+
+            function (uuid, cb) {
+                sleep(delay);
+                count_tested++;
+                chrome.management.setEnabled(uuid, false, function () {
+                    var _log = getlog(uuid + ' tested done.');
+                    console.log(_log, 'color:blue');
+                    callback();
+                });
+            }
+        ], function (err, result) {
+            if (err) console.log(err, 'color:red');
+        });
+
+    }, function (err, result) {
         if (err)
-            addlog(err ,'red', 'ERROR');
-        else
-            addlog(j + ' exts tested done', 'green')
-    })
-	
-	$("#count").html("Finished")
-	
-	//chrome.tabs.remove(honeyid);
-	/*
-	if (document.count2 == idlist.length)
-        addlog('All extensions tested!', 'green');
-    else {
-        addlog((idlist.length - document.count2) + ' extensions tesed failed!', 'red', 'ERROR');
-        addlog(idlist.length + '\t' + document.count2)
-    }
-    */
+            console.log(err, 'color:red');
+        else {
+            var _log = getlog(count_tested + ' exts tested done');
+            console.log(_log, 'color:green');
+            $("#p_tested").html(count_tested);
+        }
+    });
 }
-
-
 

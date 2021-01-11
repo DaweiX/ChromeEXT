@@ -1,16 +1,27 @@
-// 本脚本与原始页面共享DOM
-var sleep = function(time) {
-    var startTime = new Date().getTime() + parseInt(time, 10);
-    while(new Date().getTime() < startTime) {}
-};
+// var sleep = function (time) {
+//     var startTime = new Date().getTime() + parseInt(time, 10);
+//     while (new Date().getTime() < startTime) { }
+// };
+
+chrome.runtime.onMessage.addListener(
+    function (request, sender, sendResponse) {
+        console.log(JSON.stringify(request));
+        window.postMessage(JSON.stringify(request), '*');
+        sendResponse({ farewell: "goodbye" });
+    });
 
 
-chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
-	var name = request.message;
-	console.log(name);
-	//var entries = window.performance.getEntriesByType("resource");
-    //console.log(entries);
-	chrome.runtime.sendMessage({id:name})
-	return true;
-})
+// var port = chrome.runtime.connect({ name: "myport" });
 
+// chrome.runtime.onConnect.addListener(function (port) {
+//     console.assert(port.name == "myport");
+//     port.postMessage({ success: true });
+// });
+
+// port.onMessage.addListener(function (msg) {
+//     console.log(msg);
+//     if (msg.current_ext_id) {
+//         console.log(msg.current_ext_id + " (content)")
+//         port.postMessage({ from_popup: "Response from Popup" });
+//     }
+// });

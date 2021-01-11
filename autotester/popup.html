@@ -3,21 +3,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>popup</title>
 	<script src="jquery-3.4.1.min.js"></script>
-	<script src="debug.js"></script>
 	<script src="bundle.js"></script>
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<body style='width:320px'>
-    <Button id='btn1' class='btn' type='button'>List</Button>
-	<Button id='btn2' class='btn' type='button'>Honey</Button>
-	<Button id='btn3' class='btn' type='button'>Start</Button>
-	<Button id='btn4' class='btn' type='button'>Log</Button>
-	<Button id='btn5' class='btn' type='button'>Tab</Button>
-	<Button id='btn6' class='btn' type='button'>Clear</Button>
-	<p id='count'></p>
-	<p id='id'></p>
+<body>
+    <Button id='btn1' class='btn' type='button'>Log Ext Info</Button>
+	<Button id='btn2' class='btn' type='button'>Launch & Pin Honey</Button>
+	<Button id='btn3' class='btn important' type='button'>Start Test</Button>
+	<Button id='btn4' class='btn important hide' type='button'>Run</Button>
+	<Button id='btn5' class='btn important' type='button'>Tab</Button>
+	<Button id='btn6' class='btn' type='button'>Unist All Exts</Button>
+	<p><span>total exts: </span><span id="p_total">0</span></p>
+	<p><span>tested ext: </span><span id="p_tested">0</span></p>
+	<p class=""><span>honeypg id: </span><span id="p_honey_id">N/A</span></p>
+	<p><span>last id: </span><span id="p_ext_id">N/A</span></p>
 	<div class="list"></div>
 </body>
 </html>
