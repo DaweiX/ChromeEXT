@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql');
 var global_list = [];
-var connection = mysql.createPool({
+
+
+/*var connection = mysql.createPool({
 	host:'127.0.0.1',
 	user:'test',
 	password:'123456',
@@ -11,7 +12,28 @@ var connection = mysql.createPool({
 connection.getConnection(function(err,connection){
 	if(err){console.log(err);}
 	console.log('mysql connectiong is ok!')
-})
+})*/
+
+//lqg new added
+var fs = require('fs');
+
+//var csvdata = require('csvdata')
+var filepath = "../output/fingerprint.csv";
+
+
+function writefile(path,data){
+    console.log('starting to write');
+    return new Promise((resolve,reject)=>{
+        const ws = fs.createWriteStream(path, {encoding:'utf8', flags:'a'});
+        ws
+            .on('finish',()=>resolve())
+            .on('error', err=>reject(err));
+        console.log((`\nWriting data to ${path}\n`));
+        ws.write(data + '\n');
+    })
+}
+
+
 
 
 function select_item(f,index,col_name){
@@ -113,7 +135,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/add',(function(req,res,next){
+/*router.post('/add',(function(req,res,next){
     var name = req.body.name;
     var id = req.body.id;
     var table_name = req.body.table_name;
@@ -146,6 +168,23 @@ router.post('/add',(function(req,res,next){
 }
 	
 }));
+*/
+
+router.post('/add',function(req,res,next){
+    var temp = JSON.parse(JSON.stringify(req.body));
+    console.log('kasaljfaksdjflda');
+    var content =Object.keys(temp)[0];
+    console.log(content);
+    try{
+        const ws = fs.createWriteStream(filepath, {encoding:'utf8', flags:'a'});
+        console.log((`\nWriting data to ${filepath}\n`));
+        ws.write(content + '\n');
+    }catch(err){
+        console.log(err);
+    }
+})
+
+
 
 router.post('/query',(function(req,res,next){
 	var temp = JSON.parse(Object.keys(req.body)[0]);
