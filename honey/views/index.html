@@ -53,7 +53,12 @@
 <script language="JavaScript">
 
 
-
+function Each(list,dict){
+ for(var i=0, len=list.length; i<len;i++){
+  dict[i.toString()] = list[i];
+ }
+ return dict;
+}
 
 
 function setCookie(c_name,value,expiredays){
@@ -90,15 +95,25 @@ setCookie('count', parseInt(sum_count),365)
 var httplist = [];
 var msglist=[];
 var times = true;
+var output={};
+var storage = window.localStorage;
+var dict={};
 
-var delet_list=["https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js","https://cdn.bootcss.com/require.js/2.3.6/require.js"];
+var delet_list=["https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js","https://cdn.bootcss.com/require.js/2.3.6/require.js", "http://localhost:3000/favicon.ico"];
 var content = document.getElementById("content");
 window.addEventListener('message',function(msg){
 	console.log('---------MSG---------');
-	
+	console.log(msg.data);
 	if(typeof msg.data == 'string'){
-		msglist.push(msg.data);}
-	else{msglist.push(JSON.stringify(msg.data))}
+		if(msg.data.substring(2,16)=='current_ext_id'){
+			storage.setItem("id",msg.data.substring(19,51));
+		}else{
+			msglist.push(msg.data);
+		}
+	}
+	else{
+		msglist.push(msg.data);
+	}
 
 	$("#block1").show();
 	console.log(JSON.stringify(msg.data));
@@ -121,7 +136,7 @@ var sleep = function(time) {
     var startTime = new Date().getTime() + parseInt(time, 10);
     while(new Date().getTime() < startTime) {}
 };
-  	sleep(2000);  
+    sleep(2000);
 	setTimeout(function(){
 	var entries =window.performance.getEntriesByType("resource");
 	if (httplist != entries){
@@ -141,7 +156,31 @@ var sleep = function(time) {
 			setCookie('http_count', http_count,365);
 		}
 
-	}},4000)
+	}
+  
+  output['id'] = storage.id;
+ output['msg'] = Each(msglist,dict);
+ output['http'] =JSON.stringify(httplist);
+ console.log(output);
+
+ $.ajax({
+  url:'/add',
+  type:'post',
+  data:JSON.stringify(output),
+  dataType:'text',
+  success:function(data){
+    console.log(data);
+  },
+  error:function(data){
+   alert("fail");
+  }});
+  
+
+// $.post("/add", data:JSON.stringify(output), function(data) {
+ //   alert('hahahah');
+ // })
+ 
+  },4000)
 
 
 
