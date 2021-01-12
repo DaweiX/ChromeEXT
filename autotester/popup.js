@@ -45,7 +45,7 @@ $(document).ready(function () {
     // List: List all exts in console
     $("#btn1").click(function () {
         chrome.management.getAll(function (e) {
-            for (i = 1; i < e.length; i++) {
+            for (i = 0; i < e.length; i++) {
                 console.log(e[i]);
             }
         });
@@ -89,8 +89,10 @@ $(document).ready(function () {
     // Unist: Uninstall all exts
     $("#btn6").click(function () {
         chrome.management.getAll(function (e) {
-            for (i = 1; i < e.length; i++) {
+            for (i = 0; i < e.length; i++) {
                 if (e[i].id == myid) continue;
+                var _log = getlog('Now uninstalling: ' + e[i].id);
+                console.log(_log, "color:purple");
                 chrome.management.uninstall(e[i].id);
             }
         });
