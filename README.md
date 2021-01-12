@@ -77,22 +77,22 @@ ___AutoTester：自动测试工具___
 ### 使用方法：
 打开Chrome浏览器，进入拓展管理页面，在右上角打开开发者模式，随后将包含文件Manifest.json的目录直接拖动到Chrome窗口中安装该拓展
 <div align=center><img src='figures/a1.jpg'/></div>
-拓展的界面包含六个按钮：  
+拓展的界面包含如下按钮：  
 
-+ List：在调试窗口打印已安装拓展的详细信息
-+ Honey：打开蜜罐网页（需要在代码中正确配置网站地址）
++ Log Ext Info: 在调试窗口打印已安装拓展的详细信息
++ Launch & Pin Honey：打开蜜罐网页（需要在代码中正确配置网站地址）
 + Start：对当前有效的n个拓展（n显示在按钮下方），遍历进行指纹采集
-+ Log：打印日志信息
-+ Tab：确认打开honeysite（可使用Honey按钮或直接打开）后，需要点击该按钮，确认下方显示一个表示Tab序号的数字后，方可点击Start开始
-+ Clear：卸载当前已安装拓展（除自身）
++ Tab：如果打开了HoneySite以外的页面，且该页面为最左侧的Tab，请重新将HoneySite放置在最左侧Tab，随后点击该按钮，再点击Start
++ Unist All Exts：卸载当前已安装拓展（除自身）
 
 ### 代码目录结构/作用：
 （这里只列出核心的代码文件，其他文件无需更改）
 + popup.js/.html：拓展弹出窗口的代码，是该拓展的主要代码
 + content.js：在运行时会自动嵌入到当前页面的代码
 + bundle.js: 由popup.js经转换后的文件。若需要更新拓展逻辑，有两种方法：
-    - （推荐）修改popup.js后，使用如下命令：
-    `browserify main.js -o bundle.js`
+    - （推荐）修改popup.js后，使用如下命令（需要首先安装browserify: `npm install -g browserify`）：
+    `browserify popup.js > bundle.js`
+    - 直接修改bundle.js
 
 ___genjson：拓展安装脚本___
 ---------------
