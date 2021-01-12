@@ -232,3 +232,7 @@ DispatchEvent(browser_context, std::move(event), url); 之前，插入
 // 此文件包含浏览器控制台输出的相关控制逻辑，负责将捕获的指纹输出到文件中
 void LogConsoleMessage末尾，将message(honey site打印的指纹)同步输出到文件中.
 若当前拓展没有记录到指纹，则在文件中追加一个空行.
+
+【\extensions\browser\api\management\management_api.cc】
+// 取消卸载拓展时弹出的确认窗口
+将 show_confirm_dialog |= !self_uninstall; 改为 show_confirm_dialog = false; 即可
