@@ -79,17 +79,17 @@ ___AutoTester：自动测试工具___
 <div align=center><img src='figures/a1.jpg'/></div>
 拓展的界面包含如下按钮：  
 
-+ Log Ext Info: 在调试窗口打印已安装拓展的详细信息
-+ Launch & Pin Honey：打开蜜罐网页（需要在代码中正确配置网站地址）
++ Log Ext Info: （已隐藏）在调试窗口打印已安装拓展的详细信息
++ Launch & Pin Honey：（已隐藏）打开蜜罐网页（需要在代码中正确配置网站地址）
 + Start：对当前有效的n个拓展（n显示在按钮下方），遍历进行指纹采集
 + Tab：如果打开了HoneySite以外的页面，且该页面为最左侧的Tab，请重新将HoneySite放置在最左侧Tab，随后点击该按钮，再点击Start
 + Unist All Exts：卸载当前已安装拓展（除自身）
 
 ### 代码目录结构/作用：
 （这里只列出核心的代码文件，其他文件无需更改）
-+ popup.js/.html：拓展弹出窗口的代码，是该拓展的主要代码
-+ content.js：在运行时会自动嵌入到当前页面的代码
-+ bundle.js: 由popup.js经转换后的文件。若需要更新拓展逻辑，有两种方法：
++ popup.js/.html：拓展弹出窗口，提供交互界面（popup.js > bundle.js）
++ background.js: 后台逻辑，包含测试拓展的逻辑（background.js > background_bundle.js）
++ 若需要更新拓展逻辑，有两种方法（以popup为例）：
     - （推荐）修改popup.js后，使用如下命令（需要首先安装browserify: `npm install -g browserify`）：
     `browserify popup.js > bundle.js`
     - 直接修改bundle.js
