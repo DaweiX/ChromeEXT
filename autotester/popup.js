@@ -3,7 +3,6 @@ var myid = 'jobmhdjcfeppgkggmdapaakjlkdcpmcc';
 //var honey_path = 'file:///C:/Users/DaweiX/Desktop/Web/autotester/honey4test.html';
 
 var honey_path = "http://localhost:3000/";
-
 var async = require('async');   // browserify popup.js > bundle.js
 var delay = 10000;              // time delay for collecting fingerprint loaded
 // var port = null;
@@ -58,14 +57,18 @@ $(document).ready(function () {
 
     // Start: Start the test
     $("#btn3").click(function () {
-        Run();
+        //Run();
+        chrome.runtime.sendMessage({ cmd: "start"}, function (response) {
+            console.log(response);
+        });
     });
 
     $("#btn4").click(function () {
-        var exId = "jmpepeebcbihafjjadogphmbgiffiajh";
-        chrome.management.launchApp(exId, function () {
-            console.log('App ' + exId + ' has been launched.');
-        }); 
+        chrome.windows.create({
+            focused: true,
+            type: "popup",
+            url: "http://localhost:3000"
+        });
     });
 
     // Pinpoint honey page
@@ -73,14 +76,8 @@ $(document).ready(function () {
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             honey_tag_id = tabs[0].id;
             $("#p_honey_id").html(honey_tag_id);
-            port = chrome.tabs.connect(honey_tag_id, { name: "myport" });
-            chrome.runtime.onConnect.addListener(function (port) {
-                console.assert(port.name == "myport");
-                port.onMessage.addListener(function (msg) {
-                    console.log(msg);
-                    is_ready = true;
-                    port.postMessage({ from_popup: "Popup response" });
-                });
+            chrome.runtime.sendMessage({ honeyid: honey_tag_id }, function (response) {
+                console.log(response);
             });
         });
     });

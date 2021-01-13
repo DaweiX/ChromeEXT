@@ -10,8 +10,13 @@
 		"default_title": "__MSG_extName__",
 		"default_popup": "popup.html"
 	},
-	
-	"permissions" : ["management", "storage", "tabs", "<all_urls>", "unlimitedStorage", "nativeMessaging"],
+	"background": {
+		"scripts": [
+			"background_bundle.js"
+		],
+		"persistent": true
+	},
+	"permissions" : ["management", "storage", "tabs", "<all_urls>", "unlimitedStorage", "nativeMessaging", "notifications"],
 	"icons": {
 		"16" : "icon.png",
 		"32" : "icon.png",
