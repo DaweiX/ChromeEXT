@@ -163,7 +163,7 @@ if (!update_from_settings_page_) 作用域结尾，添加
   modifier.GrantHostPermission(GURL("http://localhost:3000"));
   if(!modifier.HasGrantedHostPermission(GURL("http://localhost:3000"))){
     VLOG(0) << extension()->id() << " grant permission on honeysite fail";
-}
+  }
   
   service->GrantPermissions(extension());
   service->DisableExtension(extension()->id(), disable_reason::DISABLE_USER_ACTION);
@@ -173,6 +173,12 @@ if (!update_from_settings_page_) 作用域结尾，添加
   
 }
 
+③ 追加头文件：
+/*-----------add------------*/
+#ifndef BASE_LOGGING_H_
+#include "/base/logging.h"
+#endif
+#include "chrome/browser/extensions/scripting_permissions_modifier.h"
 
 【\chrome\browser\extensions\extension_tab_util.cc】
 bool ExtensionTabUtil::OpenOptionsPageFromAPI 函数，直接 return false
