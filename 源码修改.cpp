@@ -156,12 +156,20 @@ CrxInstaller::CrxInstaller中的初始化列表中，修改allow_silent_install_
 void CrxInstaller::ReportSuccessFromUIThread()函数中，
 if (!update_from_settings_page_) 作用域结尾，添加
 
-  /*----------------Add by jw START----------------*/
+  /*----------------Add by jw and qg START----------------*/
   ExtensionService* service = service_weak_.get();
-  service->GrantPermissionsAndEnableExtension(extension());
+  
+  ScriptingPermissionsModifier modifier(profile(), extension());
+  modifier.GrantHostPermission(GURL("http://localhost:3000"));
+  if(!modifier.HasGrantedHostPermission(GURL("http://localhost:3000"))){
+    VLOG(0) << extension()->id() << " grant permission on honeysite fail";
+}
+  
+  service->GrantPermissions(extension());
+  service->DisableExtension(extension()->id(), disable_reason::DISABLE_USER_ACTION);
   VLOG(0) << "\n[INSTALL 3]--------------------"
           << "Extension " << extension()->id() << " installed!";
-  /*----------------Add by jw END----------------*/
+  /*----------------Add by jw and qg END----------------*/
   
 }
 
