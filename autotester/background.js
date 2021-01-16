@@ -1,6 +1,47 @@
+honey_tag_id = null;
+
 chrome.tabs.onCreated.addListener(function (tab) {
     chrome.tabs.remove(tab.id);
 });
+
+function checkhoney() {
+    chrome.tabs.get(honey_tag_id, function (tab) {
+        url = tab.url;
+        purl = tab.pendingUrl;
+        if (purl) {
+            //console.log('purl: ' + purl);
+            if (purl.indexOf('localhost:3000') > -1) {
+                //console.log('purl is honey');
+                return;
+            }
+            if (purl.startsWith('chrome')) {
+                //console.log('purl is chrome');
+                return;
+            }
+        }
+        if (url) {
+            //console.log('url: ' + url);
+            if (url.indexOf('localhost:3000') > -1) {
+                //console.log('url is honey');
+                return;
+            }
+            if (url.startsWith('chrome')) {
+                //console.log('url is chrome');
+                return;
+            }
+            console.log('INVALID UPDATE');
+            chrome.tabs.update(honey_tag_id, { 'url': 'http://localhost:3000/' },
+                function () {
+                    chrome.notifications.create(null, {
+                        type: 'basic',
+                        iconUrl: 'icon.png',
+                        title: 'Autotester',
+                        message: 'Navigate in page detected. Back to honey.'
+                    });
+                });
+        }
+    })
+}
 
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
@@ -32,6 +73,12 @@ var delay = 10000;              // time delay for collecting fingerprint loaded
 
 var _log = getlog('AutoTester Start');
 console.log(_log, 'color:green');
+
+count_disabled = 0;
+count_tested = 0;
+idlist = []
+iconlist = []
+
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     honey_tag_id = tabs[0].id;
     chrome.notifications.create(null, {
@@ -41,12 +88,6 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         message: 'Autotester Inited. Honey Tab id: ' + honey_tag_id
     });
 });
-
-count_disabled = 0;
-count_tested = 0;
-idlist = []
-iconlist = []
-honey_tag_id = null;
 
 function getlog(content, type) {
     color = typeof color !== 'undefined' ? color : 'gray';
@@ -128,12 +169,16 @@ function Run() {
                 chrome.management.setEnabled(uuid, true, function () {
                     var _log = getlog('Extension ' + uuid + ' has been enabled.');
                     console.log(_log, 'color:blue');
-                    cb(null, uuid);
+                    setInterval(checkhoney, 500);
+                    setTimeout(function () {
+                        clearInterval();
+                        cb(null, uuid);
+                    }, delay);
                 });
             },
 
             function (uuid, cb) {
-                sleep(delay);
+                //sleep(delay);
                 count_tested++;
                 chrome.management.setEnabled(uuid, false, function () {
                     var _log = getlog(uuid + ' tested done.');
@@ -146,7 +191,7 @@ function Run() {
                         message: uuid + ' tested done.',
                         title: 'Tested: ' + count_tested + '/' + idlist.length
                     }, function (nid) {
-                        callback();     
+                        callback();
                     });
                 });
             }
