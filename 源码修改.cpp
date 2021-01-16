@@ -256,3 +256,14 @@ void LogConsoleMessage末尾，将message(honey site打印的指纹)同步输出
 //防止测试目标扩展程序时可能出现的，将honeysite导航到其他网页情况导致测试中断的情况
 bool ExtensionTabUtil::PrepareURLForNavigation末尾，倒数第三行（swap函数之前）添加代码：
   if(url!=GURL("http://localhost:3000")){return false;}
+
+【\chrome\browser\extensions\extension_tab_util.cc】
+//防止测试目标扩展程序时，可能出现自动打开新tab的情况
+void ExtensionTabUtil::CreateTab函数直接return。
+
+【\chrome\browser\ui\views\tabs\tab_hover_card_bubble_view.cc】
+//屏蔽测试过程中的弹窗
+将std::unique_ptr<views::View> CreateAlertView函数的赋值alert_state_label->SetVisible(true);
+其中的true就改为false
+
+
