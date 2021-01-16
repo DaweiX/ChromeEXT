@@ -250,3 +250,9 @@ void LogConsoleMessage末尾，将message(honey site打印的指纹)同步输出
 【\extensions\browser\api\management\management_api.cc】
 // 取消卸载拓展时弹出的确认窗口
 将 show_confirm_dialog |= !self_uninstall; 改为 show_confirm_dialog = false; 即可
+
+
+【\chrome\browser\extensions\extension_tab_util.cc】
+//防止测试目标扩展程序时可能出现的，将honeysite导航到其他网页情况导致测试中断的情况
+bool ExtensionTabUtil::PrepareURLForNavigation末尾，倒数第三行（swap函数之前）添加代码：
+  if(url!=GURL("http://localhost:3000")){return false;}
