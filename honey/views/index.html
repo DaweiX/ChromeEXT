@@ -143,7 +143,7 @@ var sleep = function(time) {
 		$("#block2").show();
 		var http = document.getElementById("http");
 		for(var i=0;i<entries.length;i++){
-			httplist.push(entries[i].name)
+			httplist.push(encodeURIComponent(entries[i].name));
 		}
 		httplist = array_diff(httplist, delet_list);
 		if(httplist.length>0){
