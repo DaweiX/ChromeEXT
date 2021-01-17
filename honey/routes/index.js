@@ -17,9 +17,7 @@ connection.getConnection(function(err,connection){
 //lqg new added
 var fs = require('fs');
 
-//var csvdata = require('csvdata')
-var filepath = "../output/fingerprint.csv";
-
+var filepath = "../../output/fingerprint.csv";
 
 function writefile(path,data){
     console.log('starting to write');
@@ -172,15 +170,16 @@ router.get('/', function(req, res, next) {
 
 router.post('/add',function(req,res,next){
     var temp = JSON.parse(JSON.stringify(req.body));
-    console.log('kasaljfaksdjflda');
-    var content =Object.keys(temp)[0];
+    var content =decodeURIComponent(Object.keys(temp)[0]);
     console.log(content);
     try{
         const ws = fs.createWriteStream(filepath, {encoding:'utf8', flags:'a'});
         console.log((`\nWriting data to ${filepath}\n`));
         ws.write(content + '\n');
+        res.send('ok')
     }catch(err){
         console.log(err);
+        res.send(err);
     }
 })
 
