@@ -266,9 +266,9 @@ exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate :
 },{"process/browser.js":1,"timers":2}],3:[function(require,module,exports){
 honey_tag_id = null;
 
-chrome.tabs.onCreated.addListener(function (tab) {
-    chrome.tabs.remove(tab.id);
-});
+// chrome.tabs.onCreated.addListener(function (tab) {
+//     chrome.tabs.remove(tab.id);
+// });
 
 function checkhoney() {
     chrome.tabs.get(honey_tag_id, function (tab) {
@@ -435,9 +435,9 @@ function Run() {
                 chrome.management.setEnabled(uuid, true, function () {
                     var _log = getlog('Extension ' + uuid + ' has been enabled.');
                     console.log(_log, 'color:blue');
-                    setInterval(checkhoney, 500);
+                   // setInterval(checkhoney, 500);
                     setTimeout(function () {
-                        clearInterval();
+                        //clearInterval();
                         cb(null, uuid);
                     }, delay);
                 });
