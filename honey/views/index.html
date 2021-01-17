@@ -7,7 +7,8 @@
  	</head>
  	<body>
  		<div id="content">Honey</div>
-
+		<div id="extension_id_tittle">extension_id</div>
+		<div id="extension_id"></div>
  		<div id="signatures_show" style="display: none">
  			<p>show signatures:</p>
 			msg_signatures			
@@ -32,7 +33,7 @@
 			<div id = 'msg'></div>
 		</div>
 		<div id="block2" name="block2" style="display: none">
-			<p>show http fingerprint</p>
+			<p>show http     fingerprint</p>
 			<label name="extension_name">extension_name:</label>
 			<input name ="msg_fin_name_http" type="text"/>
 			<label name="extension_id">extension_id</label>
@@ -54,11 +55,12 @@
 
 
 function Each(list,dict){
- for(var i=0, len=list.length; i<len;i++){
-  dict[i.toString()] = list[i];
- }
- return dict;
+	for(var i=0, len=list.length; i<len;i++){
+		dict[i.toString()] = list[i];
+	}
+	return dict;
 }
+
 
 
 function setCookie(c_name,value,expiredays){
@@ -87,20 +89,25 @@ function getCookie(c_name){
 window.onload= function(){
 var sum_count = getCookie('count');
 sum_count = parseInt(sum_count)+1;
-setCookie('count', parseInt(sum_count),365)
+setCookie('count', parseInt(sum_count),365);
 }
-
 
 
 var httplist = [];
 var msglist=[];
 var times = true;
+var dict={};
 var output={};
 var storage = window.localStorage;
-var dict={};
 
-var delet_list=["https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js","https://cdn.bootcss.com/require.js/2.3.6/require.js", "http://localhost:3000/favicon.ico"];
-var content = document.getElementById("content");
+
+var delet_list=["https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js","https://cdn.bootcss.com/require.js/2.3.6/require.js","http://localhost:3000/favicon.ico"];
+for(var i=0; i<delet_list.length; i++){
+	delet_list[i]= encodeURIComponent(delet_list[i]);
+}
+
+
+
 window.addEventListener('message',function(msg){
 	console.log('---------MSG---------');
 	console.log(msg.data);
@@ -112,75 +119,69 @@ window.addEventListener('message',function(msg){
 		}
 	}
 	else{
+		//console.log('msg',JSON.stringify(msg.data));
+		//msglist.push(JSON.stringify(msg.data));
 		msglist.push(msg.data);
 	}
-
 	$("#block1").show();
-	console.log(JSON.stringify(msg.data));
 	var msg_div = document.getElementById("msg");
-
 	msg_div.innerText= JSON.stringify(msg.data);
-	if(times){
-		var msg_count = getCookie('msg_count');
-		msg_count = msg_count +1;
-		setCookie('msg_count',msg_count,365);
-		times = false;
-	}
-	
-
-
-	//setTimeout(search(msglist),200);
+	//	if(times){
+	//		var msg_count = getCookie('msg_count');
+	//		msg_count = msg_count +1;
+	//		setCookie('msg_count',msg_count,365);
+	//		times = false;
+		//}
+		//setTimeout(search(msglist),200);
 })
 
 var sleep = function(time) {
     var startTime = new Date().getTime() + parseInt(time, 10);
     while(new Date().getTime() < startTime) {}
 };
-    sleep(2000);
-	setTimeout(function(){
-	var entries =window.performance.getEntriesByType("resource");
+
+sleep(2000);
+setTimeout(function(){
+	console.log(Each(msglist,dict));
+	var entries = window.performance.getEntriesByType("resource");
 	if (httplist != entries){
 		$("#block2").show();
 		var http = document.getElementById("http");
+
 		for(var i=0;i<entries.length;i++){
-			httplist.push(encodeURIComponent(entries[i].name));
+			httplist.push(encodeURIComponent(entries[i].name))
 		}
 		httplist = array_diff(httplist, delet_list);
-		if(httplist.length>0){
-		console.log('--------http---------');
-		console.log(JSON.stringify(httplist))}
+		console.log('http:'+JSON.stringify(httplist))
 		http.innerText= JSON.stringify(httplist);
 		if(httplist.length>0){
 			var http_count = getCookie('http_count');
 			http_count = parseInt(http_count)+1;
 			setCookie('http_count', http_count,365);
 		}
-
 	}
-  
-  output['id'] = storage.id;
- output['msg'] = Each(msglist,dict);
- output['http'] =JSON.stringify(httplist);
- console.log(output);
 
- $.ajax({
-  url:'/add',
-  type:'post',
-  data:JSON.stringify(output),
-  dataType:'text',
-  success:function(data){
-    console.log(data);
-  },
-  error:function(data){
-   alert("fail");
-  }});
-  
+	output['id'] = storage.id;
+	output['msg'] = Each(msglist,dict);
+	output['http'] =JSON.stringify(httplist);
+	console.log(output);
 
-// $.post("/add", data:JSON.stringify(output), function(data) {
- //   alert('hahahah');
- // })
- 
-  },4000)
+	$.ajax({
+		url:'/add',
+		type:'post',
+		data:JSON.stringify(output),
+		dataType:'text',
+		success:function(data){
+				console.log(data);
+		},
+		error:function(data){
+			console.log(data);
+		}});
+
+},4000);
+
+
+
 
 
 
@@ -364,6 +365,10 @@ function array_diff(a, b) {
 
 
 </script>
+
+
+
+
 
 
 
