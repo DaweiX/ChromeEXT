@@ -45,7 +45,7 @@ lines = detected_file.readlines()  # 调用文件的 readline()方法
 print("start loading target testing crx dir")
 target_crx = []
 target_filelist = []
-
+target_filelist = os.listdir(rootdir)
 for f in target_filelist:
     if (f[-3:] == 'crx'):
         target_crx.append(f[:-4])
