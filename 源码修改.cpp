@@ -94,18 +94,10 @@ void ExtensionService::Init()函数末尾，添加
     
     // Pass the crx path to crxfileinfo
     std::string _crx_file = crx_path + crx;
-    char _crx_file_char[1024];
-    strcpy(_crx_file_char, _crx_file.c_str());
-    base::FilePath::CharType filename[1024];
-    
-    int nLen = MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, _crx_file_char, -1, NULL, 0);
-    wchar_t* pResult = new wchar_t[nLen];  
-    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, _crx_file_char, -1, pResult, nLen);  
-    base::wcslcpy(filename, pResult, base::size(filename));
-    
+    base::StringPiece filename(_crx_file.begin(), _crx_file.end());
     const base::FilePath file_path(filename);
     CRXFileInfo file_info(file_path, GetExternalVerifierFormat());
-  
+
     // Install if not installed
     const Extension* extension = registry_->GetExtensionById(
       id, ExtensionRegistry::EVERYTHING);
