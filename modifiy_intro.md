@@ -40,18 +40,15 @@ router.post('/function_test', (function(req,res,next){
     readXlsxFile('/Users/liuqiange/ChromeEXT/honey/routes/http.xlsx').then((rows) =>{
     for(var x=0; x<_array.length; x++){
     try{
-            var _index = _array[x]
+        var _index = _array[x]
         var end = rows[_index][1].length -1
-	    var noise_array = rows[_index][1].substring(1,end).split(',')
+	var noise_array = rows[_index][1].substring(1,end).split(',')
         for(var t = 0;t<noise_array.length;t++){
             _end = noise_array[t].length-1
             temp = noise_array[t].substring(1,_end)
             noise.push(temp)
     }}catch(err){continue}
-
     }
-
-
     console.log(noise)
     res.send(noise)
     })
